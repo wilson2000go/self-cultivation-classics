@@ -1,0 +1,11 @@
+{
+  "book_id": "your-book-id",
+  "title": "书名",
+  "author": "作者",
+  "voice": "子言（深沉·磁性入耳·男声）",
+  "note": "说明：每章一段音频，已裁剪片头前 6 秒，MP3 128kbps。",
+  "tracks": [
+    {"index": "00", "title": "导言", "file": "audio/00_导言.mp3", "duration_sec": 0},
+    {"index": "01", "title": "第一章 ……", "file": "audio/01_xxx.mp3", "duration_sec": 0}
+  ]
+}

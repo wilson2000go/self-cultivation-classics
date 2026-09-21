@@ -1,0 +1,19 @@
+{
+  "book_id": "lengyan-dayi-jinshi",
+  "title": "楞严大义今释",
+  "author": "南怀瑾",
+  "original": "《楞严经》（唐·般剌密帝 译）",
+  "publisher": "复旦大学出版社（2012 校订版，授权台湾老古文化）",
+  "voice": "子言（深沉·磁性入耳·男声）",
+  "note": "每章一段音频，取自书中大字号白话讲解（今译+串讲）部分；所有音频已裁剪片头前 6 秒，MP3 128kbps。",
+  "tracks": [
+    {"index": "00", "title": "导言（出版说明·叙言·凡例·楞严大义指要）", "file": "audio/00_导言.mp3", "duration_sec": 1124.5},
+    {"index": "01", "title": "第一章 心性本体论", "file": "audio/01_心性本体论.mp3", "duration_sec": 236.0},
+    {"index": "02", "title": "第二章 宇宙心物认识论", "file": "audio/02_宇宙心物认识论.mp3", "duration_sec": 929.7},
+    {"index": "03", "title": "第三章 心理与生理现状为自性功能发生的互变", "file": "audio/03_心理与生理现状为自性功能发生的互变.mp3", "duration_sec": 475.6},
+    {"index": "04", "title": "第四章 物理世界与精神世界同为自性功能的显现", "file": "audio/04_物理世界与精神世界同为自性功能的显现.mp3", "duration_sec": 517.8},
+    {"index": "05", "title": "第五章 修习佛法实验的原理", "file": "audio/05_修习佛法实验的原理.mp3", "duration_sec": 503.3},
+    {"index": "06", "title": "第六章 修习佛法的程序与方法", "file": "audio/06_修习佛法的程序与方法.mp3", "duration_sec": 887.1},
+    {"index": "07", "title": "第七章 修习佛法定慧中的错误和歧路", "file": "audio/07_修习佛法定慧中的错误和歧路.mp3", "duration_sec": 536.3}
+  ]
+}
