@@ -10,8 +10,9 @@
 
 ## 如何收听
 
-- **方式一**：直接在本仓库 `books/<书名>/audio/` 目录中点击音频文件，在 GitHub 网页即可在线播放 / 下载。
-- **方式二**：克隆整个仓库到本地，离线收听：
+- **方式一（推荐）**：访问**在线播放主页** —— <https://wilson2000go.github.io/self-cultivation-classics/> ，网页内置播放器，支持连播、倍速、记忆播放位置，手机可直接收听。
+- **方式二**：直接在本仓库 `books/<书名>/audio/` 目录中点击音频文件，在 GitHub 网页即可在线播放 / 下载。
+- **方式三**：克隆整个仓库到本地，用本地播放器或直接打开 `index.html` 离线收听：
 
   ```bash
   git clone https://github.com/wilson2000go/self-cultivation-classics.git
@@ -42,7 +43,8 @@ self-cultivation-classics/
 2. 把该书每章（或每段）的音频放入 `books/<书名>/audio/`，命名建议 `01_xxx.mp3`、`02_xxx.mp3`……；全书导言用 `00_导言.mp3`。
 3. 编辑 `manifest.json`：填写 `book_id`、书名、作者、音色，以及 `tracks` 数组（每首的编号、标题、文件名、时长秒数）。
 4. 更新本书的 `README.md` 章节清单，并在本仓库根 `README.md` 的「收录书目」中追加一行。
-5. 提交并推送。
+5. 在主页 `index.html` 的 `BOOKS` 数组中照抄现有结构，添加该书的数据（书名、作者、简介、tracks）——主页会自动上架新书。
+6. 提交并推送。
 
 > **统一约定**：每章 / 每段对应**一段**音频；所有音频建议统一裁剪片头静音（本项目统一删去前 6 秒），并转码为 **MP3（128kbps）** 以控制仓库体积。
 

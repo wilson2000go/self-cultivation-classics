@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e8">
+<title>修身养性经典解读 · 听读主页</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+<style>
+:root{
+  --bg:#f5f1e8; --bg2:#efe9dc; --ink:#3d352a; --ink-soft:#6f6353;
+  --accent:#8b6f47; --accent-deep:#6d5433; --line:#ddd2bd;
+  --card:#fffdf8; --shadow:0 2px 14px rgba(90,74,50,.08);
+  --radius:14px;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--serif); background:var(--bg); color:var(--ink);
+  background-image:radial-gradient(1200px 480px at 50% -160px, rgba(139,111,71,.10), transparent 70%);
+  line-height:1.6; padding-bottom:210px;
+}
+a{color:var(--accent-deep)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+header{text-align:center;padding:52px 20px 26px}
+.enso{
+  width:84px;height:84px;margin:0 auto 18px;border-radius:50%;
+  border:5px solid var(--accent); border-left-color:transparent;
+  transform:rotate(-45deg); opacity:.85;
+  filter:drop-shadow(0 3px 6px rgba(109,84,51,.25));
+}
+h1{font-size:clamp(26px,5vw,38px);letter-spacing:.14em;font-weight:600}
+.subtitle{margin-top:10px;color:var(--ink-soft);font-size:14px;letter-spacing:.28em}
+.top-links{margin-top:18px;font-size:13px}
+.top-links a{text-decoration:none;border-bottom:1px dashed var(--line);padding-bottom:2px}
+
+/* ---------- sections ---------- */
+main .wrap>section{margin:34px 0}
+h2{
+  font-size:15px;color:var(--accent-deep);letter-spacing:.5em;
+  display:flex;align-items:center;gap:14px;margin-bottom:16px;font-weight:600;
+}
+h2::before{content:"";width:26px;height:1px;background:var(--accent)}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---------- book cards ---------- */
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:600px){.book-grid{grid-template-columns:1fr}}
+.book-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;cursor:pointer;box-shadow:var(--shadow);
+  transition:transform .18s,box-shadow .18s,border-color .18s;position:relative;overflow:hidden;
+}
+.book-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(90,74,50,.14)}
+.book-card.active{border-color:var(--accent);box-shadow:0 6px 22px rgba(109,84,51,.18)}
+.book-card.active::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--accent),var(--accent-deep))}
+.book-title{font-size:19px;font-weight:600;letter-spacing:.05em}
+.book-author{font-size:13px;color:var(--ink-soft);margin-top:2px}
+.book-meta{margin-top:10px;font-size:12.5px;color:var(--accent-deep);display:flex;gap:12px;flex-wrap:wrap}
+.book-meta span{background:rgba(139,111,71,.08);border-radius:99px;padding:2px 10px}
+.book-card.placeholder{opacity:.62;border-style:dashed;box-shadow:none;display:flex;flex-direction:column;justify-content:center}
+.book-card.placeholder .book-title{color:var(--ink-soft)}
+.book-card.placeholder small{color:var(--ink-soft);margin-top:8px;line-height:1.7}
+
+/* ---------- book intro ---------- */
+.book-intro{
+  background:linear-gradient(180deg,rgba(139,111,71,.07),transparent 80%);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 20px;font-size:13.5px;color:var(--ink-soft);margin-bottom:16px;
+}
+.book-intro b{color:var(--ink);font-weight:600}
+
+/* ---------- track list ---------- */
+.tracks{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.track{
+  display:flex;align-items:center;gap:14px;padding:14px 18px;
+  border-bottom:1px solid #f0e9da;cursor:pointer;transition:background .15s;
+}
+.track:last-child{border-bottom:none}
+.track:hover{background:rgba(139,111,71,.05)}
+.track.playing{background:rgba(139,111,71,.09)}
+.no{
+  flex:none;width:38px;height:38px;border-radius:50%;
+  border:1.5px solid var(--accent);color:var(--accent-deep);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;letter-spacing:.02em;transition:all .2s;
+}
+.track.playing .no{background:var(--accent);border-color:var(--accent);color:#fff}
+.t-main{flex:1;min-width:0}
+.t-title{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track.playing .t-title{color:var(--accent-deep);font-weight:600}
+.t-badge{font-size:11.5px;color:#fff;background:var(--accent);border-radius:99px;padding:1px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap}
+.t-dur{flex:none;font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.bars{flex:none;display:none;align-items:flex-end;gap:2px;height:16px;width:18px}
+.track.playing .bars{display:flex}
+.bars i{width:3px;background:var(--accent);border-radius:2px;animation:jump 1s ease-in-out infinite}
+.bars i:nth-child(2){animation-delay:.25s}.bars i:nth-child(3){animation-delay:.5s}
+@keyframes jump{0%,100%{height:5px}50%{height:15px}}
+
+/* ---------- player ---------- */
+.player{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:rgba(61,53,42,.96);color:#efe7d8;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-top:1px solid rgba(139,111,71,.5);
+  padding:10px 18px calc(10px + env(safe-area-inset-bottom));
+}
+.p-inner{max-width:860px;margin:0 auto}
+.p-top{display:flex;align-items:center;gap:12px;min-height:24px}
+.p-no{flex:none;font-size:12px;color:#c9b795;border:1px solid #8b6f47;border-radius:99px;padding:0 9px;line-height:20px}
+.p-title{flex:1;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p-rate{
+  flex:none;font-size:12.5px;color:#e8dcc4;background:rgba(139,111,71,.35);
+  border:1px solid #8b6f47;border-radius:99px;padding:2px 10px;cursor:pointer;user-select:none;
+}
+.p-rate:hover{background:rgba(139,111,71,.55)}
+.p-progress{display:flex;align-items:center;gap:10px;margin-top:7px}
+.p-time{flex:none;font-size:11.5px;color:#c9b795;font-variant-numeric:tabular-nums;min-width:38px}
+.p-time.right{text-align:right}
+input[type=range]{
+  flex:1;-webkit-appearance:none;appearance:none;height:4px;border-radius:99px;
+  background:linear-gradient(to right,var(--accent) var(--p,0%),#5a5044 var(--p,0%));
+  outline:none;cursor:pointer;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:14px;height:14px;border-radius:50%;
+  background:#efe7d8;border:3px solid var(--accent);box-shadow:0 1px 4px rgba(0,0,0,.4);
+}
+input[type=range]::-moz-range-thumb{width:9px;height:9px;border-radius:50%;background:#efe7d8;border:3px solid var(--accent)}
+.p-controls{display:flex;align-items:center;justify-content:center;gap:26px;margin-top:8px}
+.ctrl{
+  background:none;border:none;color:#e8dcc4;cursor:pointer;font-family:var(--serif);
+  display:flex;align-items:center;justify-content:center;transition:opacity .15s;
+}
+.ctrl:hover{opacity:.75}
+.ctrl svg{width:22px;height:22px;fill:currentColor}
+.ctrl.play{
+  width:52px;height:52px;border-radius:50%;background:var(--accent);
+  box-shadow:0 3px 12px rgba(0,0,0,.35);
+}
+.ctrl.play svg{width:24px;height:24px}
+.ctrl .icon-play{margin-left:3px}
+.switch{display:flex;align-items:center;gap:7px;font-size:12.5px;color:#c9b795;cursor:pointer;user-select:none}
+.switch .knob{
+  width:34px;height:19px;border-radius:99px;background:#5a5044;position:relative;transition:background .2s;
+}
+.switch .knob::after{
+  content:"";position:absolute;top:2.5px;left:3px;width:14px;height:14px;border-radius:50%;
+  background:#efe7d8;transition:transform .2s;
+}
+.switch.on .knob{background:var(--accent)}
+.switch.on .knob::after{transform:translateX(14px)}
+.p-hint{text-align:center;font-size:11px;color:#8a7c66;margin-top:6px}
+
+footer.site{text-align:center;padding:44px 20px 20px;color:var(--ink-soft);font-size:12.5px}
+footer.site p{margin-top:6px;line-height:1.9}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="enso"></div>
+  <h1>修身养性经典解读</h1>
+  <div class="subtitle">听 读 经 典 · 修 身 养 性</div>
+  <div class="top-links">
+    <a href="https://github.com/wilson2000go/self-cultivation-classics" target="_blank" rel="noopener">GitHub 仓库</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section>
+      <h2>收读书目</h2>
+      <div class="book-grid" id="bookGrid"></div>
+    </section>
+    <section>
+      <h2>章节听读</h2>
+      <div class="book-intro" id="bookIntro"></div>
+      <div class="tracks" id="trackList"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>音频取自原著白话讲解部分，由 AI 单人播讲生成，仅供个人学习交流，请勿用于商业用途。</p>
+    <p>原著著作权归原作者 / 原出版方所有。</p>
+  </div>
+</footer>
+
+<!-- 底部播放器 -->
+<div class="player">
+  <div class="p-inner">
+    <div class="p-top">
+      <span class="p-no" id="pNo">—</span>
+      <span class="p-title" id="pTitle">选择一段开始收听</span>
+      <span class="p-rate" id="pRate" title="播放速度">1.0x</span>
+    </div>
+    <div class="p-progress">
+      <span class="p-time" id="pCur">0:00</span>
+      <input type="range" id="pSeek" min="0" max="100" step="0.1" value="0" aria-label="播放进度">
+      <span class="p-time right" id="pDur">0:00</span>
+    </div>
+    <div class="p-controls">
+      <span class="switch on" id="autoNext" title="自动播放下一章"><span class="knob"></span>连播</span>
+      <button class="ctrl" id="btnPrev" aria-label="上一段">
+        <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+      </button>
+      <button class="ctrl play" id="btnPlay" aria-label="播放/暂停">
+        <svg viewBox="0 0 24 24" class="icon-play" id="iconPlay"><path d="M8 5v14l11-7z"/></svg>
+        <svg viewBox="0 0 24 24" id="iconPause" style="display:none"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+      </button>
+      <button class="ctrl" id="btnNext" aria-label="下一段">
+        <svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg>
+      </button>
+    </div>
+    <div class="p-hint" id="pHint"></div>
+  </div>
+</div>
+
+<audio id="audio" preload="metadata"></audio>
+
+<script>
+/* ================= 书目数据（与 manifest.json 保持同步） =================
+   新增一本书：
+   1. 复制 books/_template/ 为 books/<书名>/，放入音频并填写 manifest.json
+   2. 在下方 BOOKS 数组中添加一个对象（照抄现有结构）
+======================================================================== */
+const BOOKS = [
+  {
+    id: "lengyan-dayi-jinshi",
+    title: "楞严大义今释",
+    author: "南怀瑾",
+    original: "《楞严经》（唐·般剌密帝 译）",
+    desc: "取自书中<b>大字号白话讲解（今译 + 串讲）</b>部分，逐章、逐段讲全讲透；附全书前言 / 序言合成之导言一篇。单人播讲，音色：子言（深沉 · 磁性入耳）。全部音频已裁剪片头 6 秒。",
+    tracks: [
+      {index:"00", title:"导言（出版说明 · 叙言 · 凡例 · 楞严大义指要）", file:"books/楞严大义今释/audio/00_导言.mp3", duration:1124.5},
+      {index:"01", title:"第一章 心性本体论", file:"books/楞严大义今释/audio/01_心性本体论.mp3", duration:236.0},
+      {index:"02", title:"第二章 宇宙心物认识论", file:"books/楞严大义今释/audio/02_宇宙心物认识论.mp3", duration:929.7},
+      {index:"03", title:"第三章 心理与生理现状为自性功能发生的互变", file:"books/楞严大义今释/audio/03_心理与生理现状为自性功能发生的互变.mp3", duration:475.6},
+      {index:"04", title:"第四章 物理世界与精神世界同为自性功能的显现", file:"books/楞严大义今释/audio/04_物理世界与精神世界同为自性功能的显现.mp3", duration:517.8},
+      {index:"05", title:"第五章 修习佛法实验的原理", file:"books/楞严大义今释/audio/05_修习佛法实验的原理.mp3", duration:503.3},
+      {index:"06", title:"第六章 修习佛法的程序与方法", file:"books/楞严大义今释/audio/06_修习佛法的程序与方法.mp3", duration:887.1},
+      {index:"07", title:"第七章 修习佛法定慧中的错误和歧路", file:"books/楞严大义今释/audio/07_修习佛法定慧中的错误和歧路.mp3", duration:536.3}
+    ]
+  }
+];
+
+/* ================= 播放器 ================= */
+const $ = id => document.getElementById(id);
+const audio = $("audio");
+const RATES = [1.0, 1.25, 1.5, 0.75];
+const STORE = "sccx-player-state";
+
+let curBook = 0, curTrack = -1;
+let dragging = false, resumeAt = 0;
+
+function fmt(t){
+  t = Math.max(0, Math.floor(t));
+  const h = Math.floor(t/3600), m = Math.floor(t%3600/60), s = t%60;
+  return h ? `${h}:${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`
+           : `${m}:${String(s).padStart(2,"0")}`;
+}
+const bookDur = b => b.tracks.reduce((a,t)=>a+t.duration,0);
+function saveState(){
+  try{ localStorage.setItem(STORE, JSON.stringify({
+    book: curBook, track: curTrack, time: audio.currentTime || 0, rate: audio.playbackRate
+  })); }catch(e){}
+}
+function loadState(){
+  try{ return JSON.parse(localStorage.getItem(STORE)); }catch(e){ return null; }
+}
+
+/* ---------- 渲染书目 ---------- */
+function renderBooks(){
+  const grid = $("bookGrid");
+  grid.innerHTML = "";
+  BOOKS.forEach((b, i) => {
+    const min = Math.round(bookDur(b)/60);
+    const card = document.createElement("div");
+    card.className = "book-card" + (i===curBook ? " active" : "");
+    card.innerHTML = `
+      <div class="book-title">《${b.title}》</div>
+      <div class="book-author">著 / 讲：${b.author}</div>
+      <div class="book-meta">
+        <span>${b.tracks.length} 段音频</span><span>共约 ${min} 分钟</span>
+      </div>`;
+    card.onclick = () => { curBook = i; renderBooks(); renderTracks(); };
+    grid.appendChild(card);
+  });
+  const ph = document.createElement("div");
+  ph.className = "book-card placeholder";
+  ph.innerHTML = `
+    <div class="book-title">下一本经典 · 敬请期待</div>
+    <small>新增书籍：复制仓库中 <code>books/_template/</code> 目录，放入音频、
+    填写 manifest.json，并在本页 <code>BOOKS</code> 数组登记即可自动上架。</small>`;
+  grid.appendChild(ph);
+}
+
+/* ---------- 渲染章节 ---------- */
+function renderTracks(resume){
+  const b = BOOKS[curBook];
+  $("bookIntro").innerHTML =
+    `<b>《${b.title}》</b> · ${b.author}<br>${b.desc}`;
+  const list = $("trackList");
+  list.innerHTML = "";
+  b.tracks.forEach((t, i) => {
+    const row = document.createElement("div");
+    row.className = "track" + (i===curTrack ? " playing" : "");
+    row.innerHTML = `
+      <div class="no">${t.index}</div>
+      <div class="t-main">
+        <span class="t-title" title="${t.title}">${t.title}</span>${
+          resume && i===resume.track ? '<span class="t-badge">上次听到</span>' : ""
+        }
+      </div>
+      <div class="bars"><i></i><i></i><i></i></div>
+      <div class="t-dur">${fmt(t.duration)}</div>`;
+    row.onclick = () => playTrack(curBook, i);
+    list.appendChild(row);
+  });
+}
+
+/* ---------- 播放控制 ---------- */
+function playTrack(b, t, seek){
+  curBook = b; curTrack = t;
+  const track = BOOKS[b].tracks[t];
+  audio.src = encodeURI(track.file);
+  audio.playbackRate = audio.playbackRate || 1;
+  resumeAt = seek || 0;
+  audio.play().catch(()=>{});
+  $("pNo").textContent = track.index;
+  $("pTitle").textContent = `《${BOOKS[b].title}》 ${track.title}`;
+  $("pDur").textContent = fmt(track.duration);
+  renderBooks(); renderTracks();
+  saveState();
+}
+function togglePlay(){
+  if (curTrack < 0){ playTrack(curBook, 0); return; }
+  audio.paused ? audio.play().catch(()=>{}) : (audio.pause(), saveState());
+}
+function step(delta){
+  const b = BOOKS[curBook];
+  const next = curTrack + delta;
+  if (next < 0 || next >= b.tracks.length){ audio.pause(); return; }
+  playTrack(curBook, next);
+}
+function setRate(){
+  const cur = RATES.indexOf(audio.playbackRate);
+  const r = RATES[(cur + 1) % RATES.length];
+  audio.playbackRate = r;
+  setRateUI(r);
+  saveState();
+}
+
+/* ---------- 事件绑定 ---------- */
+$("btnPlay").onclick = togglePlay;
+$("btnPrev").onclick = () => step(-1);
+$("btnNext").onclick = () => step(1);
+$("pRate").onclick = setRate;
+$("autoNext").onclick = function(){
+  this.classList.toggle("on");
+};
+
+audio.addEventListener("play", () => {
+  $("iconPlay").style.display = "none";
+  $("iconPause").style.display = "";
+});
+audio.addEventListener("pause", () => {
+  $("iconPlay").style.display = "";
+  $("iconPause").style.display = "none";
+});
+audio.addEventListener("loadedmetadata", () => {
+  if (resumeAt > 0 && resumeAt < audio.duration - 5){
+    audio.currentTime = resumeAt;
+    $("pHint").textContent = "已定位到上次收听位置";
+    setTimeout(() => $("pHint").textContent = "", 4000);
+  }
+  resumeAt = 0;
+});
+audio.addEventListener("ended", () => {
+  const auto = $("autoNext").classList.contains("on");
+  if (auto) step(1); else saveState();
+});
+let lastSave = 0;
+audio.addEventListener("timeupdate", () => {
+  if (!dragging && audio.duration){
+    const p = audio.currentTime / audio.duration * 100;
+    $("pSeek").value = p;
+    $("pSeek").style.setProperty("--p", p + "%");
+    $("pCur").textContent = fmt(audio.currentTime);
+  }
+  const now = Date.now();
+  if (now - lastSave > 5000 && !audio.paused){ lastSave = now; saveState(); }
+});
+const seek = $("pSeek");
+seek.addEventListener("input", () => {
+  dragging = true;
+  seek.style.setProperty("--p", seek.value + "%");
+  if (audio.duration) $("pCur").textContent = fmt(seek.value/100*audio.duration);
+});
+seek.addEventListener("change", () => {
+  if (audio.duration) audio.currentTime = seek.value/100*audio.duration;
+  dragging = false; saveState();
+});
+window.addEventListener("beforeunload", saveState);
+
+/* ---------- 初始化 ---------- */
+(function init(){
+  const st = loadState();
+  if (st && BOOKS[st.book]){
+    curBook = st.book; curTrack = st.track;
+    if (st.rate) audio.playbackRate = st.rate, setRateUI(st.rate);
+    renderBooks(); renderTracks(st);
+    if (typeof st.track === "number" && st.track >= 0){
+      const t = BOOKS[curBook].tracks[st.track];
+      $("pNo").textContent = t.index;
+      $("pTitle").textContent = `《${BOOKS[curBook].title}》 ${t.title}`;
+      $("pDur").textContent = fmt(t.duration);
+      resumeAt = st.time || 0;   // loadedmetadata 时定位
+    }
+  } else {
+    renderBooks(); renderTracks();
+  }
+})();
+function setRateUI(r){
+  $("pRate").textContent = (r % 1 === 0 ? r.toFixed(1) : r) + "x";
+}
+</script>
+</body>
+</html>
