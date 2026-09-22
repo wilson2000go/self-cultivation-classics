@@ -157,6 +157,27 @@ input[type=range]::-moz-range-thumb{width:9px;height:9px;border-radius:50%;backg
 
 footer.site{text-align:center;padding:44px 20px 20px;color:var(--ink-soft);font-size:12.5px}
 footer.site p{margin-top:6px;line-height:1.9}
+
+/* ---------- 字幕 ---------- */
+body{padding-bottom:250px}
+.p-sub{
+  font-size:13px;color:#e8dcc4;line-height:1.5;margin-top:6px;
+  max-height:2.9em;overflow:hidden;cursor:pointer;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+}
+.sub-panel{
+  position:fixed;left:0;right:0;bottom:200px;z-index:49;max-height:46vh;overflow-y:auto;
+  background:rgba(61,53,42,.98);color:#efe7d8;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-top:1px solid rgba(139,111,71,.5);display:none;padding:8px 0;
+}
+.sub-panel.show{display:block}
+.sub-list{max-width:860px;margin:0 auto;padding:0 18px}
+.sub-item{padding:9px 12px;border-radius:10px;font-size:14px;line-height:1.7;cursor:pointer;transition:background .15s;color:#d8cdb8}
+.sub-item:hover{background:rgba(139,111,71,.18)}
+.sub-item.cur{background:rgba(139,111,71,.32);color:#fff}
+.sub-item.cur::before{content:"▶ ";color:var(--accent)}
+.sub-close{text-align:center;font-size:12px;color:#8a7c66;padding:8px;cursor:pointer}
 </style>
 </head>
 <body>
@@ -198,7 +219,9 @@ footer.site p{margin-top:6px;line-height:1.9}
       <span class="p-no" id="pNo">—</span>
       <span class="p-title" id="pTitle">选择一段开始收听</span>
       <span class="p-rate" id="pRate" title="播放速度">1.0x</span>
+      <span class="p-rate" id="subToggle" title="显示 / 隐藏字幕全文">字幕</span>
     </div>
+    <div class="p-sub" id="pSub">字幕加载中…</div>
     <div class="p-progress">
       <span class="p-time" id="pCur">0:00</span>
       <input type="range" id="pSeek" min="0" max="100" step="0.1" value="0" aria-label="播放进度">
@@ -222,6 +245,12 @@ footer.site p{margin-top:6px;line-height:1.9}
 </div>
 
 <audio id="audio" preload="metadata"></audio>
+
+<!-- 字幕全文面板（默认隐藏，点“字幕”或字幕条展开） -->
+<div class="sub-panel" id="subPanel">
+  <div class="sub-list" id="subList"></div>
+  <div class="sub-close" id="subClose">收起字幕全文</div>
+</div>
 
 <script>
 /* ================= 书目数据（与 manifest.json 保持同步） =================
@@ -254,14 +283,14 @@ const BOOKS = [
     original: "南怀瑾 著述",
     desc: "南师二〇〇六年「禅与生命认知」系列讲演实录。按<b>七日</b>各成一段，附导言一篇。单人播讲，音色：子言（深沉·磁性入耳）。全部音频已裁剪片头 6 秒。",
     tracks: [
-      {index:"00", title:"导言", file:"https://raw.githubusercontent.com/wilson2000go/chanshengming-renzhi/main/audio/00_导言.mp3", duration:399.5},
-      {index:"01", title:"第一日", file:"https://raw.githubusercontent.com/wilson2000go/chanshengming-renzhi/main/audio/01_第一日.mp3", duration:388.5},
-      {index:"02", title:"第二日", file:"https://raw.githubusercontent.com/wilson2000go/chanshengming-renzhi/main/audio/02_第二日.mp3", duration:570.1},
-      {index:"03", title:"第三日", file:"https://raw.githubusercontent.com/wilson2000go/chanshengming-renzhi/main/audio/03_第三日.mp3", duration:437.1},
-      {index:"04", title:"第四日", file:"https://raw.githubusercontent.com/wilson2000go/chanshengming-renzhi/main/audio/04_第四日.mp3", duration:247.1},
-      {index:"05", title:"第五日", file:"https://raw.githubusercontent.com/wilson2000go/chanshengming-renzhi/main/audio/05_第五日.mp3", duration:287.5},
-      {index:"06", title:"第六日", file:"https://raw.githubusercontent.com/wilson2000go/chanshengming-renzhi/main/audio/06_第六日.mp3", duration:787.6},
-      {index:"07", title:"第七日", file:"https://raw.githubusercontent.com/wilson2000go/chanshengming-renzhi/main/audio/07_第七日.mp3", duration:419.4},
+      {index:"00", title:"导言", file:"audio/chanshengming-renzhi/00_导言.mp3", duration:497.4},
+      {index:"01", title:"第一日", file:"audio/chanshengming-renzhi/01_第一日.mp3", duration:2740.5},
+      {index:"02", title:"第二日", file:"audio/chanshengming-renzhi/02_第二日.mp3", duration:2970.0},
+      {index:"03", title:"第三日", file:"audio/chanshengming-renzhi/03_第三日.mp3", duration:3467.0},
+      {index:"04", title:"第四日", file:"audio/chanshengming-renzhi/04_第四日.mp3", duration:2328.8},
+      {index:"05", title:"第五日", file:"audio/chanshengming-renzhi/05_第五日.mp3", duration:2965.3},
+      {index:"06", title:"第六日", file:"audio/chanshengming-renzhi/06_第六日.mp3", duration:4224.0},
+      {index:"07", title:"第七日", file:"audio/chanshengming-renzhi/07_第七日.mp3", duration:2391.7},
     ]
   },
   {
@@ -413,6 +442,49 @@ function renderTracks(resume){
   });
 }
 
+/* ---------- 字幕 ---------- */
+let curSubs = null, curSentIdx = -1;
+function loadSubs(slug, index){
+  curSubs = null; curSentIdx = -1;
+  $("pSub").textContent = "字幕加载中…";
+  fetch("subs/" + slug + "/" + index + ".json")
+    .then(r => r.ok ? r.json() : null)
+    .then(d => {
+      curSubs = d;
+      if (d && d.sentences && d.sentences.length){ renderSubList(); updateSub(); }
+      else { $("pSub").textContent = "（本段暂无字幕）"; }
+    })
+    .catch(() => { $("pSub").textContent = "（字幕加载失败）"; });
+}
+function renderSubList(){
+  const list = $("subList"); list.innerHTML = "";
+  if (!curSubs || !curSubs.sentences) return;
+  curSubs.sentences.forEach((s, i) => {
+    const d = document.createElement("div");
+    d.className = "sub-item"; d.textContent = s.text;
+    d.onclick = () => { if (audio.duration) audio.currentTime = s.t; if (audio.paused) audio.play().catch(()=>{}); };
+    list.appendChild(d);
+  });
+}
+function updateSub(){
+  if (!curSubs || !curSubs.sentences || !curSubs.sentences.length) return;
+  const t = audio.currentTime, arr = curSubs.sentences;
+  let idx = 0;
+  for (let i = 0; i < arr.length; i++){ if (t >= arr[i].t) idx = i; else break; }
+  if (idx !== curSentIdx){
+    curSentIdx = idx;
+    $("pSub").textContent = arr[idx].text;
+    const items = $("subList").children;
+    for (let i = 0; i < items.length; i++) items[i].classList.toggle("cur", i === idx);
+    const cur = items[idx];
+    if (cur && $("subPanel").classList.contains("show")) cur.scrollIntoView({ block: "center" });
+  }
+}
+function toggleSubPanel(){
+  const p = $("subPanel"); p.classList.toggle("show");
+  if (p.classList.contains("show") && curSubs) renderSubList();
+}
+
 /* ---------- 播放控制 ---------- */
 function playTrack(b, t, seek){
   curBook = b; curTrack = t;
@@ -425,6 +497,7 @@ function playTrack(b, t, seek){
   $("pTitle").textContent = `《${BOOKS[b].title}》 ${track.title}`;
   $("pDur").textContent = fmt(track.duration);
   renderBooks(); renderTracks();
+  loadSubs(BOOKS[b].id, track.index);
   saveState();
 }
 function togglePlay(){
@@ -453,6 +526,9 @@ $("pRate").onclick = setRate;
 $("autoNext").onclick = function(){
   this.classList.toggle("on");
 };
+$("subToggle").onclick = toggleSubPanel;
+$("pSub").onclick = toggleSubPanel;
+$("subClose").onclick = () => $("subPanel").classList.remove("show");
 
 audio.addEventListener("play", () => {
   $("iconPlay").style.display = "none";
@@ -482,6 +558,7 @@ audio.addEventListener("timeupdate", () => {
     $("pSeek").style.setProperty("--p", p + "%");
     $("pCur").textContent = fmt(audio.currentTime);
   }
+  updateSub();
   const now = Date.now();
   if (now - lastSave > 5000 && !audio.paused){ lastSave = now; saveState(); }
 });
