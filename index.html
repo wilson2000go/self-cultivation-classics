@@ -258,14 +258,14 @@ const BOOKS = [
     original: "南怀瑾 著述",
     desc: "南师二〇〇六年「禅与生命认知」系列讲演实录。按<b>七日</b>各成一段，附导言一篇。单人播讲，音色：子言（深沉·磁性入耳）。全部音频已裁剪片头 6 秒。",
     tracks: [
-      {index:"00", title:"导言", file:"audio/chanshengming-renzhi/00_导言.mp3", duration:497.4},
-      {index:"01", title:"第一日", file:"audio/chanshengming-renzhi/01_第一日.mp3", duration:2740.5},
-      {index:"02", title:"第二日", file:"audio/chanshengming-renzhi/02_第二日.mp3", duration:2970.0},
-      {index:"03", title:"第三日", file:"audio/chanshengming-renzhi/03_第三日.mp3", duration:3467.0},
-      {index:"04", title:"第四日", file:"audio/chanshengming-renzhi/04_第四日.mp3", duration:2328.8},
-      {index:"05", title:"第五日", file:"audio/chanshengming-renzhi/05_第五日.mp3", duration:2965.3},
-      {index:"06", title:"第六日", file:"audio/chanshengming-renzhi/06_第六日.mp3", duration:4224.0},
-      {index:"07", title:"第七日", file:"audio/chanshengming-renzhi/07_第七日.mp3", duration:2391.7},
+      {index:"00", title:"导言", file:"audio/chanshengming-renzhi/00_导言.mp3", duration:845.8},
+      {index:"01", title:"第一日", file:"audio/chanshengming-renzhi/01_第一日.mp3", duration:1630.8},
+      {index:"02", title:"第二日", file:"audio/chanshengming-renzhi/02_第二日.mp3", duration:1197.3},
+      {index:"03", title:"第三日", file:"audio/chanshengming-renzhi/03_第三日.mp3", duration:947.9},
+      {index:"04", title:"第四日", file:"audio/chanshengming-renzhi/04_第四日.mp3", duration:850.3},
+      {index:"05", title:"第五日", file:"audio/chanshengming-renzhi/05_第五日.mp3", duration:1399.0},
+      {index:"06", title:"第六日", file:"audio/chanshengming-renzhi/06_第六日.mp3", duration:1361.4},
+      {index:"07", title:"第七日", file:"audio/chanshengming-renzhi/07_第七日.mp3", duration:1534.2},
     ]
   },
   {
@@ -426,6 +426,7 @@ function playTrack(b, t, seek){
   audio.playbackRate = audio.playbackRate || 1;
   resumeAt = seek || 0;
   audio.play().catch(()=>{});
+  audio.onloadedmetadata = () => { $("pDur").textContent = fmt(audio.duration); };
   $("pNo").textContent = track.index;
   $("pTitle").textContent = `《${BOOKS[b].title}》 ${track.title}`;
   $("pDur").textContent = fmt(track.duration);
