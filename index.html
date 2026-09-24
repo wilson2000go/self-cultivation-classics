@@ -196,6 +196,13 @@ body{padding-bottom:250px}
   margin-top:10px;font-size:12px;color:var(--accent-deep);
   background:rgba(139,111,71,.10);border-radius:99px;padding:3px 10px;display:inline-block;
 }
+
+/* ---------- 播放量 / 点赞 ---------- */
+.b-stats{margin-top:10px;font-size:12px;color:var(--ink-soft);display:flex;gap:14px;align-items:center}
+.t-sub{font-size:11.5px;color:var(--ink-soft);margin-top:5px;display:flex;gap:14px;align-items:center}
+.like{cursor:pointer;color:var(--accent-deep);user-select:none;transition:transform .12s;white-space:nowrap}
+.like:hover{transform:scale(1.1)}
+.like.done{color:#c0392b}
 </style>
 </head>
 <body>
@@ -269,7 +276,21 @@ body{padding-bottom:250px}
 <audio id="audio" preload="metadata"></audio>
 
 
-<script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, doc, getDoc, setDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+const firebaseConfig = { apiKey:"AIzaSyBzSFHu6cukLTYhGcCgBf5OFltNwDrDLHc", authDomain:"audio-podcast-reading.firebaseapp.com", projectId:"audio-podcast-reading", storageBucket:"audio-podcast-reading.firebasestorage.app", messagingSenderId:"312906402086", appId:"1:312906402086:web:f420f6758f9a37453c59e7", measurementId:"G-TQ4T01B893" };
+const fbApp = initializeApp(firebaseConfig);
+const db = getFirestore(fbApp);
+const fbDoc = (...seg) => doc(db, ...seg);
+async function fbInc(field, ...seg){ try{ await setDoc(fbDoc(...seg), {[field]: increment(1)}, {merge:true}); }catch(e){} }
+async function fbGet(...seg){ try{ const sn = await getDoc(fbDoc(...seg)); return sn.exists() ? sn.data() : null; }catch(e){ return null; } }
+const LIKED_KEY = "sccx-liked";
+function loadLiked(){ try{ return JSON.parse(localStorage.getItem(LIKED_KEY)) || {}; }catch(e){ return {}; } }
+function isLiked(k){ return !!loadLiked()[k]; }
+function markLiked(k){ const m = loadLiked(); m[k] = 1; try{ localStorage.setItem(LIKED_KEY, JSON.stringify(m)); }catch(e){} }
+
+
 /* ================= 书目数据（与 manifest.json 保持同步） =================
    新增一本书：
    1. 复制 books/_template/ 为 books/<书名>/，放入音频并填写 manifest.json
@@ -442,9 +463,20 @@ function renderBooks(){
       <div class="book-author">著 / 讲：${b.author}</div>
       <div class="book-meta">
         <span>${b.tracks.length} 段音频</span><span>共约 ${min} 分钟</span>
-      </div>` + (p && p.track>=0 ? `<div class="book-resume">↻ 上次听到 第${(b.tracks[p.track]?b.tracks[p.track].index:1)}节</div>` : "");
+      </div>` + (p && p.track>=0 ? `<div class="book-resume">↻ 上次听到 第${(b.tracks[p.track]?b.tracks[p.track].index:1)}节</div>` : "") + `
+      <div class="b-stats">
+        <span>▶ <b class="b-plays">0</b> 次播放</span>
+        <span class="like ${isLiked("b:"+b.id)?"done":""}" data-k="b:${b.id}">♥ <b class="b-likes">0</b></span>
+      </div>`;
+    card.querySelector(".like").onclick = (e)=>{ e.stopPropagation(); likeBook(b.id); };
     card.onclick = () => { showView("reader"); switchBook(i); };
     grid.appendChild(card);
+    fbGet("books", b.id).then(d=>{
+      if(!d) return;
+      const pe = card.querySelector(".b-plays"), le = card.querySelector(".b-likes");
+      if(pe) pe.textContent = d.plays||0;
+      if(le) le.textContent = d.likes||0;
+    });
   });
   const ph = document.createElement("div");
   ph.className = "book-card placeholder";
@@ -470,14 +502,23 @@ function renderTracks(){
     row.innerHTML = `
       <div class="no">${t.index}</div>
       <div class="t-main">
-        <span class="t-title" title="${t.title}">${t.title}</span>${
-          rp && i===rp.track ? '<span class="t-badge">上次听到</span>' : ""
-        }
+        <span class="t-title" title="${t.title}">${t.title}</span>${ rp && i===rp.track ? '<span class="t-badge">上次听到</span>' : "" }
+        <div class="t-sub">
+          <span>▶ <b class="t-plays">0</b> 次</span>
+          <span class="like ${isLiked("t:"+b.id+":"+i)?"done":""}" data-k="t:${b.id}:${i}">♥ <b class="t-likes">0</b></span>
+        </div>
       </div>
       <div class="bars"><i></i><i></i><i></i></div>
       <div class="t-dur">${fmt(t.duration)}</div>`;
+    row.querySelector(".like").onclick = (e)=>{ e.stopPropagation(); likeTrack(b.id, i); };
     row.onclick = () => playTrack(curBook, i);
     list.appendChild(row);
+    fbGet("books", b.id, "tracks", String(i)).then(d=>{
+      if(!d) return;
+      const pe = row.querySelector(".t-plays"), le = row.querySelector(".t-likes");
+      if(pe) pe.textContent = d.plays||0;
+      if(le) le.textContent = d.likes||0;
+    });
   });
 }
 
@@ -492,10 +533,28 @@ function switchBook(i){
   playTrack(i, p ? p.track : 0, p ? p.time : 0);
 }
 
+function likeBook(id){
+  const k = "b:"+id;
+  if(isLiked(k)) return;
+  fbInc("likes","books",id);
+  markLiked(k);
+  const el = document.querySelector(`.like[data-k="${k}"]`);
+  if(el){ el.classList.add("done"); const n = el.querySelector(".b-likes"); if(n) n.textContent = (+n.textContent||0)+1; }
+}
+function likeTrack(bookId, i){
+  const k = "t:"+bookId+":"+i;
+  if(isLiked(k)) return;
+  fbInc("likes","books",bookId,"tracks",String(i));
+  markLiked(k);
+  const el = document.querySelector(`.like[data-k="${k}"]`);
+  if(el){ el.classList.add("done"); const n = el.querySelector(".t-likes"); if(n) n.textContent = (+n.textContent||0)+1; }
+}
+
 /* ---------- 播放控制 ---------- */
 
 function playTrack(b, t, seek){
   curBook = b; curTrack = t;
+  try{ fbInc("plays","books",BOOKS[b].id); fbInc("plays","books",BOOKS[b].id,"tracks",String(t)); }catch(e){}
   const track = BOOKS[b].tracks[t];
   audio.src = encodeURI(track.file);
   audio.playbackRate = audio.playbackRate || 1;
