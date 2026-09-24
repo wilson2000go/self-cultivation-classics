@@ -311,7 +311,7 @@ const BOOKS = [
     title: "中国佛教发展史略",
     author: "南怀瑾",
     original: "南怀瑾 著述",
-    desc: "南师《中国佛教发展史略》全本解读性讲读。从印度文化背景、释迦牟尼生平，到佛教在中国的传播兴衰、二十世纪现状与世界概况，并附禅宗丛林制度专章。按<b>引言 + 五章 + 附录</b>分为八段，单人播讲，音色：子言（深沉·磁性入耳）。全部音频已裁剪片头 6 秒。",
+    desc: "南师《中国佛教发展史略》全本解读性讲读。从印度文化背景、释迦牟尼生平，到佛教在中国的传播兴衰、二十世纪现状与世界概况，并附禅宗丛林制度专章。按<b>引言 + 五章 + 附录</b>分为八段。",
     tracks: [
       {index:"00", title:"导言（出版说明 · 引言 · 全书导览）", file:"audio/zhongguo-fojiao-fazhan-shilue/00_导言.mp3", duration:347.1},
       {index:"01", title:"第一章 佛教与印度固有文化的关系", file:"audio/zhongguo-fojiao-fazhan-shilue/01_第一章佛教与印度固有文化的关系.mp3", duration:1436.3},
@@ -655,6 +655,11 @@ window.addEventListener("beforeunload", saveState);
   showView("shelf");
 })();
 function setRateUI(r){
+  $("pRate").textContent = (r % 1 === 0 ? r.toFixed(1) : r) + "x";
+}
+</script>
+</body>
+</html>UI(r){
   $("pRate").textContent = (r % 1 === 0 ? r.toFixed(1) : r) + "x";
 }
 </script>
