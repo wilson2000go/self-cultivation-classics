@@ -283,8 +283,8 @@ const firebaseConfig = { apiKey:"AIzaSyBzSFHu6cukLTYhGcCgBf5OFltNwDrDLHc", authD
 const fbApp = initializeApp(firebaseConfig);
 const db = getFirestore(fbApp);
 const fbDoc = (...seg) => doc(db, ...seg);
-async function fbInc(field, ...seg){ try{ await setDoc(fbDoc(...seg), {[field]: increment(1)}, {merge:true}); }catch(e){} }
-async function fbGet(...seg){ try{ const sn = await getDoc(fbDoc(...seg)); return sn.exists() ? sn.data() : null; }catch(e){ return null; } }
+async function fbInc(field, ...seg){ try{ await setDoc(fbDoc(...seg), {[field]: increment(1)}, {merge:true}); }catch(e){ console.error('[FB inc 失败]', seg.join('/'), e && e.message); } }
+async function fbGet(...seg){ try{ const sn = await getDoc(fbDoc(...seg)); return sn.exists() ? sn.data() : null; }catch(e){ console.error('[FB get 失败]', seg.join('/'), e && e.message); return null; } }
 const LIKED_KEY = "sccx-liked";
 function loadLiked(){ try{ return JSON.parse(localStorage.getItem(LIKED_KEY)) || {}; }catch(e){ return {}; } }
 function isLiked(k){ return !!loadLiked()[k]; }
