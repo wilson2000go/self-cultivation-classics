@@ -160,6 +160,42 @@ footer.site p{margin-top:6px;line-height:1.9}
 
 body{padding-bottom:250px}
 
+
+/* ---------- 视图切换 ---------- */
+.view{display:none}
+.view.active{display:block}
+
+/* 书库头部 + 搜索 */
+.shelf-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:34px 0}
+.shelf-head h2{margin-bottom:0;flex:none}
+.shelf-search{
+  flex:1;min-width:160px;max-width:340px;margin-left:auto;
+  font-family:var(--serif);font-size:13.5px;color:var(--ink);
+  background:var(--card);border:1px solid var(--line);border-radius:99px;
+  padding:8px 16px;outline:none;transition:border-color .15s,box-shadow .15s;
+}
+.shelf-search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(139,111,71,.12)}
+.shelf-search::placeholder{color:var(--ink-soft)}
+
+/* 阅读器返回栏 */
+.reader-bar{
+  position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:14px;
+  margin:24px 0 18px;padding:12px 16px;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+}
+.back-btn{
+  flex:none;background:none;border:1px solid var(--line);border-radius:99px;
+  font-family:var(--serif);font-size:13.5px;color:var(--accent-deep);
+  padding:6px 14px;cursor:pointer;transition:all .15s;
+}
+.back-btn:hover{background:rgba(139,111,71,.08);border-color:var(--accent)}
+.reader-bar-title{flex:1;font-size:15px;font-weight:600;color:var(--ink);letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* 卡片续听徽标 */
+.book-resume{
+  margin-top:10px;font-size:12px;color:var(--accent-deep);
+  background:rgba(139,111,71,.10);border-radius:99px;padding:3px 10px;display:inline-block;
+}
 </style>
 </head>
 <body>
@@ -175,12 +211,18 @@ body{padding-bottom:250px}
 
 <main>
   <div class="wrap">
-    <section>
-      <h2>收读书目</h2>
+    <section id="viewShelf" class="view active">
+      <div class="shelf-head">
+        <h2>收读书目</h2>
+        <input class="shelf-search" id="shelfSearch" type="search" placeholder="搜索书名 / 作者…" aria-label="搜索书目">
+      </div>
       <div class="book-grid" id="bookGrid"></div>
     </section>
-    <section>
-      <h2>章节听读</h2>
+    <section id="viewReader" class="view">
+      <div class="reader-bar">
+        <button class="back-btn" id="backBtn" type="button">← 收读书目</button>
+        <span class="reader-bar-title" id="readerTitle"></span>
+      </div>
       <div class="book-intro" id="bookIntro"></div>
       <div class="tracks" id="trackList"></div>
     </section>
@@ -362,10 +404,15 @@ const BOOKS = [
 const $ = id => document.getElementById(id);
 const audio = $("audio");
 const RATES = [1.0, 1.25, 1.5, 0.75];
-const STORE = "sccx-player-state";
+const STORE = "sccx-progress";
+let curFilter = "";
 
 let curBook = 0, curTrack = -1;
 let dragging = false, resumeAt = 0;
+
+function loadAll(){ try{ return JSON.parse(localStorage.getItem(STORE)) || {}; }catch(e){ return {}; } }
+function saveProgress(bookId, track, time){ const a = loadAll(); a[bookId] = {track, time}; try{ localStorage.setItem(STORE, JSON.stringify(a)); }catch(e){} }
+function loadProgress(bookId){ return loadAll()[bookId] || null; }
 
 function fmt(t){
   t = Math.max(0, Math.floor(t));
@@ -375,20 +422,19 @@ function fmt(t){
 }
 const bookDur = b => b.tracks.reduce((a,t)=>a+t.duration,0);
 function saveState(){
-  try{ localStorage.setItem(STORE, JSON.stringify({
-    book: curBook, track: curTrack, time: audio.currentTime || 0, rate: audio.playbackRate
-  })); }catch(e){}
-}
-function loadState(){
-  try{ return JSON.parse(localStorage.getItem(STORE)); }catch(e){ return null; }
+  if (curBook < 0 || !BOOKS[curBook]) return;
+  saveProgress(BOOKS[curBook].id, curTrack, audio.currentTime || 0);
 }
 
 /* ---------- 渲染书目 ---------- */
 function renderBooks(){
   const grid = $("bookGrid");
   grid.innerHTML = "";
+  const kw = curFilter.trim().toLowerCase();
   BOOKS.forEach((b, i) => {
+    if (kw && !(b.title.toLowerCase().includes(kw) || (b.author||"").toLowerCase().includes(kw))) return;
     const min = Math.round(bookDur(b)/60);
+    const p = loadProgress(b.id);
     const card = document.createElement("div");
     card.className = "book-card" + (i===curBook ? " active" : "");
     card.innerHTML = `
@@ -396,8 +442,8 @@ function renderBooks(){
       <div class="book-author">著 / 讲：${b.author}</div>
       <div class="book-meta">
         <span>${b.tracks.length} 段音频</span><span>共约 ${min} 分钟</span>
-      </div>`;
-    card.onclick = () => { curBook = i; renderBooks(); renderTracks(); };
+      </div>` + (p && p.track>=0 ? `<div class="book-resume">↻ 上次听到 第${(b.tracks[p.track]?b.tracks[p.track].index:1)}节</div>` : "");
+    card.onclick = () => { showView("reader"); switchBook(i); };
     grid.appendChild(card);
   });
   const ph = document.createElement("div");
@@ -410,10 +456,12 @@ function renderBooks(){
 }
 
 /* ---------- 渲染章节 ---------- */
-function renderTracks(resume){
+function renderTracks(){
   const b = BOOKS[curBook];
   $("bookIntro").innerHTML =
     `<b>《${b.title}》</b> · ${b.author}<br>${b.desc}`;
+  $("readerTitle").textContent = `《${b.title}》`;
+  const rp = loadProgress(b.id);
   const list = $("trackList");
   list.innerHTML = "";
   b.tracks.forEach((t, i) => {
@@ -423,7 +471,7 @@ function renderTracks(resume){
       <div class="no">${t.index}</div>
       <div class="t-main">
         <span class="t-title" title="${t.title}">${t.title}</span>${
-          resume && i===resume.track ? '<span class="t-badge">上次听到</span>' : ""
+          rp && i===rp.track ? '<span class="t-badge">上次听到</span>' : ""
         }
       </div>
       <div class="bars"><i></i><i></i><i></i></div>
@@ -431,6 +479,17 @@ function renderTracks(resume){
     row.onclick = () => playTrack(curBook, i);
     list.appendChild(row);
   });
+}
+
+function showView(name){
+  $("viewShelf").classList.toggle("active", name==="shelf");
+  $("viewReader").classList.toggle("active", name==="reader");
+}
+function switchBook(i){
+  if (i === curBook && curTrack >= 0 && !audio.paused) return;
+  curBook = i;
+  const p = loadProgress(BOOKS[i].id);
+  playTrack(i, p ? p.track : 0, p ? p.time : 0);
 }
 
 /* ---------- 播放控制 ---------- */
@@ -475,6 +534,8 @@ $("pRate").onclick = setRate;
 $("autoNext").onclick = function(){
   this.classList.toggle("on");
 };
+$("backBtn").onclick = () => showView("shelf");
+$("shelfSearch").addEventListener("input", e => { curFilter = e.target.value; renderBooks(); });
 
 
 audio.addEventListener("play", () => {
@@ -522,21 +583,8 @@ window.addEventListener("beforeunload", saveState);
 
 /* ---------- 初始化 ---------- */
 (function init(){
-  const st = loadState();
-  if (st && BOOKS[st.book]){
-    curBook = st.book; curTrack = st.track;
-    if (st.rate) audio.playbackRate = st.rate, setRateUI(st.rate);
-    renderBooks(); renderTracks(st);
-    if (typeof st.track === "number" && st.track >= 0){
-      const t = BOOKS[curBook].tracks[st.track];
-      $("pNo").textContent = t.index;
-      $("pTitle").textContent = `《${BOOKS[curBook].title}》 ${t.title}`;
-      $("pDur").textContent = fmt(t.duration);
-      resumeAt = st.time || 0;   // loadedmetadata 时定位
-    }
-  } else {
-    renderBooks(); renderTracks();
-  }
+  renderBooks();
+  showView("shelf");
 })();
 function setRateUI(r){
   $("pRate").textContent = (r % 1 === 0 ? r.toFixed(1) : r) + "x";
