@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>听读后台管理 · 修心养性经典</title>
+<style>
+  :root{ --paper:#f7f2e7; --ink:#3a3326; --line:#d9cfb8; --accent:#8a6d3b; --green:#3f8f5f; --red:#b04a3a; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Noto Serif SC",system-ui,sans-serif;background:var(--paper);color:var(--ink);padding:24px;line-height:1.6}
+  h1{font-size:24px;margin:0 0 4px;letter-spacing:.04em}
+  .sub{color:#8a7e63;font-size:13px;margin-bottom:18px}
+  .panel{background:#fffdf7;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:16px}
+  .panel h2{font-size:16px;margin:0 0 12px;color:var(--accent)}
+  label{display:block;font-size:13px;margin:8px 0 4px;color:#6f6450}
+  input[type=text],input[type=password],textarea,input[type=number]{
+    width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fffdf9;color:var(--ink)}
+  textarea{resize:vertical;min-height:64px}
+  button{cursor:pointer;border:none;border-radius:8px;padding:8px 14px;font:inherit;background:var(--accent);color:#fff;margin:4px 6px 4px 0;transition:.15s}
+  button:hover{filter:brightness(1.08)}
+  button.ghost{background:#fffdf7;color:var(--accent);border:1px solid var(--accent)}
+  button.danger{background:var(--red)}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+  .row>div{flex:1;min-width:160px}
+  .book{display:flex;gap:14px;align-items:center;background:#fffdf7;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+  .book img{width:64px;height:64px;object-fit:cover;border-radius:8px;background:#efe9dc;flex:0 0 auto}
+  .book .info{flex:1;min-width:0}
+  .book .info .t{font-weight:600;font-size:15px}
+  .book .info .m{font-size:12px;color:#8a7e63;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .book .ctrls{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .switch{display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer}
+  .status{font-size:13px;padding:8px 12px;border-radius:8px;background:#f0ebdd;color:#6f6450;margin-top:8px}
+  .status.ok{background:#e6f3ea;color:var(--green)}
+  .status.err{background:#f6e2dd;color:var(--red)}
+  .hidden{display:none}
+  .modal{position:fixed;inset:0;background:rgba(50,42,28,.45);display:flex;align-items:center;justify-content:center;padding:20px;z-index:50}
+  .modal .box{background:#fffdf7;border-radius:14px;padding:20px;width:100%;max-width:460px;max-height:90vh;overflow:auto}
+  .modal .box h3{margin:0 0 12px}
+  .muted{font-size:12px;color:#8a7e63}
+  code{background:#f0ebdd;padding:1px 6px;border-radius:5px;font-size:12px}
+</style>
+</head>
+<body>
+  <h1>听读后台管理</h1>
+  <div class="sub">修心养性经典 · 自助管理书卡（显隐 / 排序 / 编辑），保存即发布</div>
+
+  <!-- 登录 -->
+  <div id="login" class="panel">
+    <h2>① 登录</h2>
+    <div class="row">
+      <div>
+        <label>管理密码</label>
+        <input type="password" id="pwd" placeholder="默认密码 areading">
+      </div>
+      <div style="flex:0 0 auto">
+        <button id="loginBtn">进入后台</button>
+      </div>
+    </div>
+    <div class="muted">静态站点无服务端，密码仅做基础屏障；真正写入仓库需下方 GitHub Token。</div>
+  </div>
+
+  <!-- 主界面 -->
+  <div id="app" class="hidden">
+    <div class="panel">
+      <h2>② 发布配置（首次填写后会自动记忆）</h2>
+      <div class="row">
+        <div><label>仓库 owner/repo</label><input type="text" id="repo" value="wilson2000go/self-cultivation-classics"></div>
+        <div><label>分支</label><input type="text" id="branch" value="main"></div>
+      </div>
+      <div class="row" style="margin-top:6px">
+        <div><label>GitHub Token（仅本地保存，用于写回仓库，需 repo 权限）</label><input type="password" id="token" placeholder="ghp_..."></div>
+      </div>
+      <div style="margin-top:8px">
+        <button id="saveCfg" class="ghost">保存配置到本机</button>
+        <button id="loadBtn">重新加载 data.json</button>
+        <button id="downloadBtn" class="ghost">下载 data.json（无 Token 时手动替换）</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>③ 书卡管理</h2>
+      <div id="list"></div>
+      <div style="margin-top:10px">
+        <button id="publishBtn">保存并发布</button>
+        <span id="saveHint" class="muted">未保存的改动仅在本地，点“保存并发布”才写入线上。</span>
+      </div>
+      <div id="status" class="status hidden"></div>
+    </div>
+  </div>
+
+  <!-- 编辑弹窗 -->
+  <div id="modal" class="modal hidden">
+    <div class="box">
+      <h3>编辑书卡</h3>
+      <label>书名 title</label><input type="text" id="e_title">
+      <label>著 / 讲 author</label><input type="text" id="e_author">
+      <label>底本 original</label><input type="text" id="e_original">
+      <label>简介 desc</label><textarea id="e_desc"></textarea>
+      <label>封面图 URL（cover，留空则不显示封面）</label><input type="text" id="e_cover" placeholder="https://...jpg">
+      <div style="margin-top:14px;text-align:right">
+        <button class="ghost" id="mCancel">取消</button>
+        <button id="mSave">保存</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+const PWD = 'areading';
+const $ = id => document.getElementById(id);
+let DATA = null;          // {books:[...]}
+let token = '';
+let editIdx = -1;
+let dirty = false;
+
+/* ---------- 登录 ---------- */
+$('loginBtn').onclick = () => {
+  if ($('pwd').value === PWD){ localStorage.setItem('admin_ok','1'); enter(); }
+  else showStatus('密码错误', false);
+};
+function enter(){
+  $('login').classList.add('hidden');
+  $('app').classList.remove('hidden');
+  // 恢复配置
+  $('repo').value = localStorage.getItem('cfg_repo') || 'wilson2000go/self-cultivation-classics';
+  $('branch').value = localStorage.getItem('cfg_branch') || 'main';
+  $('token').value = localStorage.getItem('cfg_token') || '';
+  token = $('token').value;
+  loadData();
+}
+
+/* ---------- 配置 ---------- */
+$('saveCfg').onclick = () => {
+  localStorage.setItem('cfg_repo', $('repo').value.trim());
+  localStorage.setItem('cfg_branch', $('branch').value.trim());
+  localStorage.setItem('cfg_token', $('token').value.trim());
+  token = $('token').value.trim();
+  showStatus('配置已保存到本机浏览器（localStorage）', true);
+};
+
+/* ---------- 加载 ---------- */
+async function loadData(){
+  showStatus('正在加载 data.json ...', true);
+  try{
+    const r = await fetch('data.json', {cache:'no-store'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    DATA = await r.json();
+    if(!DATA.books) DATA.books = [];
+    dirty = false;
+    renderList();
+    showStatus('已加载 '+DATA.books.length+' 本书', true);
+  }catch(e){ showStatus('加载失败：'+e.message, false); }
+}
+$('loadBtn').onclick = loadData;
+
+/* ---------- 渲染列表 ---------- */
+function renderList(){
+  const wrap = $('list');
+  wrap.innerHTML = '';
+  DATA.books.forEach((b, i) => {
+    const div = document.createElement('div');
+    div.className = 'book';
+    const cover = b.cover ? `<img src="${b.cover}" alt="">` : `<img alt="无封面">`;
+    div.innerHTML = `
+      ${cover}
+      <div class="info">
+        <div class="t">《${b.title}》</div>
+        <div class="m">${b.author||''} · ${b.tracks?b.tracks.length:0} 段 · order ${b.order??'?'}</div>
+      </div>
+      <div class="ctrls">
+        <label class="switch"><input type="checkbox" ${b.visible!==false?'checked':''} data-act="vis" data-i="${i}"> 显示</label>
+        <button class="ghost" data-act="up" data-i="${i}">↑上移</button>
+        <button class="ghost" data-act="down" data-i="${i}">↓下移</button>
+        <button class="ghost" data-act="edit" data-i="${i}">编辑</button>
+        <button class="danger" data-act="del" data-i="${i}">删除</button>
+      </div>`;
+    wrap.appendChild(div);
+  });
+  // 绑定事件
+  wrap.querySelectorAll('[data-act]').forEach(el => {
+    const act = el.dataset.act, i = +el.dataset.i;
+    if(act==='vis') el.onchange = () => { DATA.books[i].visible = el.checked; markDirty(); };
+    if(act==='up') el.onclick = () => { if(i>0){ [DATA.books[i-1],DATA.books[i]]=[DATA.books[i],DATA.books[i-1]]; reorder(); renderList(); markDirty(); } };
+    if(act==='down') el.onclick = () => { if(i<DATA.books.length-1){ [DATA.books[i+1],DATA.books[i]]=[DATA.books[i],DATA.books[i+1]]; reorder(); renderList(); markDirty(); } };
+    if(act==='edit') el.onclick = () => openEdit(i);
+    if(act==='del') el.onclick = () => { if(confirm('确认删除《'+(DATA.books[i].title)+'》？')){ DATA.books.splice(i,1); reorder(); renderList(); markDirty(); } };
+  });
+}
+function reorder(){ DATA.books.forEach((b,i)=> b.order = i+1); }
+function markDirty(){ dirty = true; }
+
+/* ---------- 编辑弹窗 ---------- */
+function openEdit(i){
+  editIdx = i; const b = DATA.books[i];
+  $('e_title').value = b.title||'';
+  $('e_author').value = b.author||'';
+  $('e_original').value = b.original||'';
+  $('e_desc').value = b.desc||'';
+  $('e_cover').value = b.cover||'';
+  $('modal').classList.remove('hidden');
+}
+$('mCancel').onclick = () => $('modal').classList.add('hidden');
+$('mSave').onclick = () => {
+  const b = DATA.books[editIdx];
+  b.title = $('e_title').value.trim();
+  b.author = $('e_author').value.trim();
+  b.original = $('e_original').value.trim();
+  b.desc = $('e_desc').value.trim();
+  b.cover = $('e_cover').value.trim();
+  $('modal').classList.add('hidden');
+  reorder(); renderList(); markDirty();
+};
+
+/* ---------- 下载 ---------- */
+$('downloadBtn').onclick = () => {
+  const blob = new Blob([JSON.stringify(DATA,null,2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'data.json'; a.click();
+};
+
+/* ---------- 发布 ---------- */
+$('publishBtn').onclick = async () => {
+  const repo = $('repo').value.trim();
+  const branch = $('branch').value.trim();
+  token = $('token').value.trim();
+  if(!token){ showStatus('未填写 GitHub Token，无法自动发布。请点“下载 data.json”手动替换并 push。', false); return; }
+  showStatus('正在读取仓库中 data.json 的 sha ...', true);
+  try{
+    const meta = await fetch(`https://api.github.com/repos/${repo}/contents/data.json?ref=${branch}`, {
+      headers:{'Authorization':'Bearer '+token}
+    });
+    if(!meta.ok) throw new Error('获取 sha 失败 HTTP '+meta.status);
+    const sha = (await meta.json()).sha;
+    reorder();
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(DATA,null,2))));
+    const put = await fetch(`https://api.github.com/repos/${repo}/contents/data.json`, {
+      method:'PUT',
+      headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},
+      body: JSON.stringify({ message:'update data.json via admin', content, sha, branch })
+    });
+    const pr = await put.json();
+    if(!put.ok) throw new Error(pr.message||('HTTP '+put.status));
+    dirty = false;
+    showStatus('✅ 已发布！GitHub Pages 通常 1 分钟内生效，可刷新前台查看。', true);
+  }catch(e){ showStatus('发布失败：'+e.message, false); }
+};
+
+/* ---------- 工具 ---------- */
+function showStatus(msg, ok){
+  const s = $('status'); s.classList.remove('hidden');
+  s.textContent = msg; s.className = 'status ' + (ok?'ok':'err');
+}
+// 若已登录过则直接进入
+if(localStorage.getItem('admin_ok')==='1'){ enter(); }
+</script>
+</body>
+</html>
