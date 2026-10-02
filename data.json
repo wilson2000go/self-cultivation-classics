@@ -527,6 +527,72 @@
           "duration": 1334
         }
       ]
+    },
+    {
+      "id": "zhongguo-daojiao-fazhan-shilue",
+      "title": "中国道教发展史略",
+      "author": "南怀瑾",
+      "original": "南怀瑾 著述",
+      "desc": "南师《中国道教发展史略》全本解读性讲读。从汉末民间道术、寇谦之陶弘景建制，到唐代吕纯阳、宋代陈抟，宋元全真王重阳丘处机，明清张三丰，再到二十世纪《道藏》的保存。按九章分为九段。",
+      "cover": "",
+      "visible": true,
+      "order": 6,
+      "tracks": [
+        {
+          "index": "01",
+          "title": "第一章 道教学术思想的文化渊源",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/01_第一章道教学术思想的文化渊源.mp3",
+          "duration": 939.0
+        },
+        {
+          "index": "02",
+          "title": "第二章 道教的建立",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/02_第二章道教的建立.mp3",
+          "duration": 1079.9
+        },
+        {
+          "index": "03",
+          "title": "第三章 道教的成长",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/03_第三章道教的成长.mp3",
+          "duration": 612.2
+        },
+        {
+          "index": "04",
+          "title": "第四章 道教的扩张",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/04_第四章道教的扩张.mp3",
+          "duration": 932.9
+        },
+        {
+          "index": "05",
+          "title": "第五章 道教的演变",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/05_第五章道教的演变.mp3",
+          "duration": 1002.6
+        },
+        {
+          "index": "06",
+          "title": "第六章 宋元时期新兴的道教",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/06_第六章宋元时期新兴的道教.mp3",
+          "duration": 1089.8
+        },
+        {
+          "index": "07",
+          "title": "第七章 明清时期的道教",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/07_第七章明清时期的道教.mp3",
+          "duration": 898.0
+        },
+        {
+          "index": "08",
+          "title": "第八章 二十世纪的道教",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/08_第八章二十世纪的道教.mp3",
+          "duration": 567.0
+        },
+        {
+          "index": "09",
+          "title": "附录 道藏缘启",
+          "file": "audio/zhongguo-daojiao-fazhan-shilue/09_附录道藏缘启.mp3",
+          "duration": 639.1
+        }
+      ]
     }
   ]
 }
