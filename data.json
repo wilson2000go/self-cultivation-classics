@@ -593,6 +593,396 @@
           "duration": 639.1
         }
       ]
+    },
+    {
+      "id": "laozi-tashuo",
+      "title": "老子他说",
+      "author": "南怀瑾",
+      "original": "南怀瑾 著述",
+      "desc": "南师《老子他说》全本解读性讲读。从长篇引言疏通老子身世与《道德经》流传脉络，逐章（第一至二十六章）以经史合参的方式，把八十一章的玄理讲成日用常行的活学问。按<b>引言六段 + 二十六章细分为五十七段</b>，共六十三段。",
+      "cover": "",
+      "visible": true,
+      "order": 7,
+      "tracks": [
+        {
+          "index": "01",
+          "title": "引言（一）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/01_引言（一）.mp3",
+          "duration": 717.5
+        },
+        {
+          "index": "02",
+          "title": "引言（二）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/02_引言（二）.mp3",
+          "duration": 697.7
+        },
+        {
+          "index": "03",
+          "title": "引言（三）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/03_引言（三）.mp3",
+          "duration": 884.1
+        },
+        {
+          "index": "04",
+          "title": "引言（四）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/04_引言（四）.mp3",
+          "duration": 1054.7
+        },
+        {
+          "index": "05",
+          "title": "引言（五）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/05_引言（五）.mp3",
+          "duration": 1065.1
+        },
+        {
+          "index": "06",
+          "title": "引言（六）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/06_引言（六）.mp3",
+          "duration": 968.7
+        },
+        {
+          "index": "07",
+          "title": "第一章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/07_第一章.mp3",
+          "duration": 779.3
+        },
+        {
+          "index": "08",
+          "title": "第二章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/08_第二章（上）.mp3",
+          "duration": 1262.0
+        },
+        {
+          "index": "09",
+          "title": "第二章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/09_第二章（下）.mp3",
+          "duration": 1038.1
+        },
+        {
+          "index": "10",
+          "title": "第三章（一）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/10_第三章（一）.mp3",
+          "duration": 685.3
+        },
+        {
+          "index": "11",
+          "title": "第三章（二）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/11_第三章（二）.mp3",
+          "duration": 936.3
+        },
+        {
+          "index": "12",
+          "title": "第三章（三）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/12_第三章（三）.mp3",
+          "duration": 997.2
+        },
+        {
+          "index": "13",
+          "title": "第三章（四）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/13_第三章（四）.mp3",
+          "duration": 1109.1
+        },
+        {
+          "index": "14",
+          "title": "第三章（五）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/14_第三章（五）.mp3",
+          "duration": 1082.6
+        },
+        {
+          "index": "15",
+          "title": "第三章（六）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/15_第三章（六）.mp3",
+          "duration": 1109.3
+        },
+        {
+          "index": "16",
+          "title": "第四章（一）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/16_第四章（一）.mp3",
+          "duration": 1408.8
+        },
+        {
+          "index": "17",
+          "title": "第四章（二）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/17_第四章（二）.mp3",
+          "duration": 1209.6
+        },
+        {
+          "index": "18",
+          "title": "第四章（三）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/18_第四章（三）.mp3",
+          "duration": 1057.0
+        },
+        {
+          "index": "19",
+          "title": "第五章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/19_第五章（上）.mp3",
+          "duration": 1007.3
+        },
+        {
+          "index": "20",
+          "title": "第五章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/20_第五章（下）.mp3",
+          "duration": 858.4
+        },
+        {
+          "index": "21",
+          "title": "第六章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/21_第六章.mp3",
+          "duration": 1094.0
+        },
+        {
+          "index": "22",
+          "title": "第七章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/22_第七章.mp3",
+          "duration": 912.6
+        },
+        {
+          "index": "23",
+          "title": "第八章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/23_第八章.mp3",
+          "duration": 1097.9
+        },
+        {
+          "index": "24",
+          "title": "第九章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/24_第九章（上）.mp3",
+          "duration": 1122.8
+        },
+        {
+          "index": "25",
+          "title": "第九章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/25_第九章（下）.mp3",
+          "duration": 889.3
+        },
+        {
+          "index": "26",
+          "title": "第十章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/26_第十章（上）.mp3",
+          "duration": 1123.1
+        },
+        {
+          "index": "27",
+          "title": "第十章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/27_第十章（下）.mp3",
+          "duration": 923.8
+        },
+        {
+          "index": "28",
+          "title": "第十一章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/28_第十一章.mp3",
+          "duration": 619.3
+        },
+        {
+          "index": "29",
+          "title": "第十二章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/29_第十二章.mp3",
+          "duration": 949.8
+        },
+        {
+          "index": "30",
+          "title": "第十三章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/30_第十三章.mp3",
+          "duration": 1344.9
+        },
+        {
+          "index": "31",
+          "title": "第十四章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/31_第十四章.mp3",
+          "duration": 1075.2
+        },
+        {
+          "index": "32",
+          "title": "第十五章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/32_第十五章（上）.mp3",
+          "duration": 1128.5
+        },
+        {
+          "index": "33",
+          "title": "第十五章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/33_第十五章（下）.mp3",
+          "duration": 842.3
+        },
+        {
+          "index": "34",
+          "title": "第十六章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/34_第十六章（上）.mp3",
+          "duration": 989.3
+        },
+        {
+          "index": "35",
+          "title": "第十六章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/35_第十六章（下）.mp3",
+          "duration": 964.5
+        },
+        {
+          "index": "36",
+          "title": "第十七章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/36_第十七章.mp3",
+          "duration": 911.7
+        },
+        {
+          "index": "37",
+          "title": "第十八章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/37_第十八章.mp3",
+          "duration": 865.3
+        },
+        {
+          "index": "38",
+          "title": "第十九章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/38_第十九章.mp3",
+          "duration": 753.4
+        },
+        {
+          "index": "39",
+          "title": "第二十章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/39_第二十章（上）.mp3",
+          "duration": 944.4
+        },
+        {
+          "index": "40",
+          "title": "第二十章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/40_第二十章（下）.mp3",
+          "duration": 1194.0
+        },
+        {
+          "index": "41",
+          "title": "第二十一章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/41_第二十一章（上）.mp3",
+          "duration": 546.7
+        },
+        {
+          "index": "42",
+          "title": "第二十一章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/42_第二十一章（下）.mp3",
+          "duration": 903.4
+        },
+        {
+          "index": "43",
+          "title": "第二十二章（一）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/43_第二十二章（一）.mp3",
+          "duration": 979.4
+        },
+        {
+          "index": "44",
+          "title": "第二十二章（二）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/44_第二十二章（二）.mp3",
+          "duration": 741.2
+        },
+        {
+          "index": "45",
+          "title": "第二十二章（三）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/45_第二十二章（三）.mp3",
+          "duration": 859.5
+        },
+        {
+          "index": "46",
+          "title": "第二十二章（四）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/46_第二十二章（四）.mp3",
+          "duration": 968.5
+        },
+        {
+          "index": "47",
+          "title": "第二十二章（五）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/47_第二十二章（五）.mp3",
+          "duration": 897.9
+        },
+        {
+          "index": "48",
+          "title": "第二十三章",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/48_第二十三章.mp3",
+          "duration": 872.6
+        },
+        {
+          "index": "49",
+          "title": "第二十四章（上）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/49_第二十四章（上）.mp3",
+          "duration": 999.2
+        },
+        {
+          "index": "50",
+          "title": "第二十四章（下）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/50_第二十四章（下）.mp3",
+          "duration": 990.4
+        },
+        {
+          "index": "51",
+          "title": "第二十五章（一）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/51_第二十五章（一）.mp3",
+          "duration": 619.2
+        },
+        {
+          "index": "52",
+          "title": "第二十五章（二）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/52_第二十五章（二）.mp3",
+          "duration": 1079.3
+        },
+        {
+          "index": "53",
+          "title": "第二十五章（三）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/53_第二十五章（三）.mp3",
+          "duration": 855.6
+        },
+        {
+          "index": "54",
+          "title": "第二十六章（一）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/54_第二十六章（一）.mp3",
+          "duration": 835.9
+        },
+        {
+          "index": "55",
+          "title": "第二十六章（二）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/55_第二十六章（二）.mp3",
+          "duration": 768.2
+        },
+        {
+          "index": "56",
+          "title": "第二十六章（三）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/56_第二十六章（三）.mp3",
+          "duration": 1173.1
+        },
+        {
+          "index": "57",
+          "title": "第二十六章（四）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/57_第二十六章（四）.mp3",
+          "duration": 844.5
+        },
+        {
+          "index": "58",
+          "title": "第二十六章（五）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/58_第二十六章（五）.mp3",
+          "duration": 1059.7
+        },
+        {
+          "index": "59",
+          "title": "第二十六章（六）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/59_第二十六章（六）.mp3",
+          "duration": 1261.2
+        },
+        {
+          "index": "60",
+          "title": "第二十六章（七）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/60_第二十六章（七）.mp3",
+          "duration": 927.0
+        },
+        {
+          "index": "61",
+          "title": "第二十六章（八）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/61_第二十六章（八）.mp3",
+          "duration": 1056.3
+        },
+        {
+          "index": "62",
+          "title": "第二十六章（九）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/62_第二十六章（九）.mp3",
+          "duration": 874.1
+        },
+        {
+          "index": "63",
+          "title": "第二十六章（十）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/63_第二十六章（十）.mp3",
+          "duration": 1124.2
+        }
+      ]
     }
   ]
 }
