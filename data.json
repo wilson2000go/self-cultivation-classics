@@ -983,6 +983,804 @@
           "duration": 1124.2
         }
       ]
+    },
+    {
+      "id": "zhuangzi-nanhua",
+      "title": "庄子諵譁",
+      "author": "南怀瑾",
+      "original": "南怀瑾 著述",
+      "desc": "南师《庄子諵譁》内篇全本解读性讲读。庄子内七篇——逍遥游、齐物论、养生主、人间世、德充符、大宗师、应帝王——南怀瑾先生以通俗亲切的闲谈方式，把庄子的逍遥自在、万物齐一、养生处世、心斋坐忘，讲成活生生的生命智慧与解脱之道。抛开晦涩注疏，直指本心，于笑谈中见通透。全本按七篇细分为九十一节，约七个半小时。",
+      "cover": "",
+      "visible": true,
+      "order": 8,
+      "tracks": [
+        {
+          "index": "01",
+          "title": "逍遥游（1）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/01_逍遥游（1）.mp3",
+          "duration": 687.8
+        },
+        {
+          "index": "02",
+          "title": "逍遥游（2）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/02_逍遥游（2）.mp3",
+          "duration": 1229.5
+        },
+        {
+          "index": "03",
+          "title": "逍遥游（3）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/03_逍遥游（3）.mp3",
+          "duration": 976.5
+        },
+        {
+          "index": "04",
+          "title": "逍遥游（4）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/04_逍遥游（4）.mp3",
+          "duration": 1078.7
+        },
+        {
+          "index": "05",
+          "title": "逍遥游（5）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/05_逍遥游（5）.mp3",
+          "duration": 991.1
+        },
+        {
+          "index": "06",
+          "title": "逍遥游（6）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/06_逍遥游（6）.mp3",
+          "duration": 1284.8
+        },
+        {
+          "index": "07",
+          "title": "逍遥游（7）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/07_逍遥游（7）.mp3",
+          "duration": 1281.5
+        },
+        {
+          "index": "08",
+          "title": "逍遥游（8）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/08_逍遥游（8）.mp3",
+          "duration": 616.6
+        },
+        {
+          "index": "09",
+          "title": "逍遥游（9）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/09_逍遥游（9）.mp3",
+          "duration": 874.3
+        },
+        {
+          "index": "10",
+          "title": "逍遥游（10）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/10_逍遥游（10）.mp3",
+          "duration": 747.7
+        },
+        {
+          "index": "11",
+          "title": "齐物论（1）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/11_齐物论（1）.mp3",
+          "duration": 767.6
+        },
+        {
+          "index": "12",
+          "title": "齐物论（2）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/12_齐物论（2）.mp3",
+          "duration": 1065.0
+        },
+        {
+          "index": "13",
+          "title": "齐物论（3）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/13_齐物论（3）.mp3",
+          "duration": 605.2
+        },
+        {
+          "index": "14",
+          "title": "齐物论（4）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/14_齐物论（4）.mp3",
+          "duration": 1038.9
+        },
+        {
+          "index": "15",
+          "title": "齐物论（5）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/15_齐物论（5）.mp3",
+          "duration": 1056.2
+        },
+        {
+          "index": "16",
+          "title": "齐物论（6）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/16_齐物论（6）.mp3",
+          "duration": 1242.5
+        },
+        {
+          "index": "17",
+          "title": "齐物论（7）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/17_齐物论（7）.mp3",
+          "duration": 1470.0
+        },
+        {
+          "index": "18",
+          "title": "齐物论（8）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/18_齐物论（8）.mp3",
+          "duration": 835.8
+        },
+        {
+          "index": "19",
+          "title": "齐物论（9）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/19_齐物论（9）.mp3",
+          "duration": 795.8
+        },
+        {
+          "index": "20",
+          "title": "齐物论（10）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/20_齐物论（10）.mp3",
+          "duration": 907.4
+        },
+        {
+          "index": "21",
+          "title": "齐物论（11）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/21_齐物论（11）.mp3",
+          "duration": 933.0
+        },
+        {
+          "index": "22",
+          "title": "齐物论（12）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/22_齐物论（12）.mp3",
+          "duration": 956.5
+        },
+        {
+          "index": "23",
+          "title": "齐物论（13）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/23_齐物论（13）.mp3",
+          "duration": 692.3
+        },
+        {
+          "index": "24",
+          "title": "齐物论（14）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/24_齐物论（14）.mp3",
+          "duration": 984.4
+        },
+        {
+          "index": "25",
+          "title": "齐物论（15）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/25_齐物论（15）.mp3",
+          "duration": 721.0
+        },
+        {
+          "index": "26",
+          "title": "齐物论（16）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/26_齐物论（16）.mp3",
+          "duration": 839.0
+        },
+        {
+          "index": "27",
+          "title": "齐物论（17）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/27_齐物论（17）.mp3",
+          "duration": 1005.0
+        },
+        {
+          "index": "28",
+          "title": "齐物论（18）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/28_齐物论（18）.mp3",
+          "duration": 1076.7
+        },
+        {
+          "index": "29",
+          "title": "齐物论（19）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/29_齐物论（19）.mp3",
+          "duration": 512.1
+        },
+        {
+          "index": "30",
+          "title": "齐物论（20）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/30_齐物论（20）.mp3",
+          "duration": 755.0
+        },
+        {
+          "index": "31",
+          "title": "齐物论（21）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/31_齐物论（21）.mp3",
+          "duration": 889.5
+        },
+        {
+          "index": "32",
+          "title": "齐物论（22）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/32_齐物论（22）.mp3",
+          "duration": 610.5
+        },
+        {
+          "index": "33",
+          "title": "养生主（1）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/33_养生主（1）.mp3",
+          "duration": 808.9
+        },
+        {
+          "index": "34",
+          "title": "养生主（2）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/34_养生主（2）.mp3",
+          "duration": 846.3
+        },
+        {
+          "index": "35",
+          "title": "养生主（3）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/35_养生主（3）.mp3",
+          "duration": 460.3
+        },
+        {
+          "index": "36",
+          "title": "养生主（4）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/36_养生主（4）.mp3",
+          "duration": 685.4
+        },
+        {
+          "index": "37",
+          "title": "养生主（5）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/37_养生主（5）.mp3",
+          "duration": 661.8
+        },
+        {
+          "index": "38",
+          "title": "养生主（6）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/38_养生主（6）.mp3",
+          "duration": 999.7
+        },
+        {
+          "index": "39",
+          "title": "人间世（1）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/39_人间世（1）.mp3",
+          "duration": 708.3
+        },
+        {
+          "index": "40",
+          "title": "人间世（2）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/40_人间世（2）.mp3",
+          "duration": 887.1
+        },
+        {
+          "index": "41",
+          "title": "人间世（3）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/41_人间世（3）.mp3",
+          "duration": 531.4
+        },
+        {
+          "index": "42",
+          "title": "人间世（4）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/42_人间世（4）.mp3",
+          "duration": 911.5
+        },
+        {
+          "index": "43",
+          "title": "人间世（5）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/43_人间世（5）.mp3",
+          "duration": 680.1
+        },
+        {
+          "index": "44",
+          "title": "人间世（6）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/44_人间世（6）.mp3",
+          "duration": 1022.8
+        },
+        {
+          "index": "45",
+          "title": "人间世（7）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/45_人间世（7）.mp3",
+          "duration": 688.3
+        },
+        {
+          "index": "46",
+          "title": "人间世（8）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/46_人间世（8）.mp3",
+          "duration": 816.7
+        },
+        {
+          "index": "47",
+          "title": "人间世（9）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/47_人间世（9）.mp3",
+          "duration": 884.7
+        },
+        {
+          "index": "48",
+          "title": "人间世（10）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/48_人间世（10）.mp3",
+          "duration": 826.5
+        },
+        {
+          "index": "49",
+          "title": "人间世（11）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/49_人间世（11）.mp3",
+          "duration": 626.2
+        },
+        {
+          "index": "50",
+          "title": "人间世（12）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/50_人间世（12）.mp3",
+          "duration": 814.5
+        },
+        {
+          "index": "51",
+          "title": "人间世（13）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/51_人间世（13）.mp3",
+          "duration": 1099.2
+        },
+        {
+          "index": "52",
+          "title": "人间世（14）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/52_人间世（14）.mp3",
+          "duration": 1111.5
+        },
+        {
+          "index": "53",
+          "title": "人间世（15）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/53_人间世（15）.mp3",
+          "duration": 866.1
+        },
+        {
+          "index": "54",
+          "title": "人间世（16）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/54_人间世（16）.mp3",
+          "duration": 854.3
+        },
+        {
+          "index": "55",
+          "title": "人间世（17）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/55_人间世（17）.mp3",
+          "duration": 887.5
+        },
+        {
+          "index": "56",
+          "title": "人间世（18）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/56_人间世（18）.mp3",
+          "duration": 1136.0
+        },
+        {
+          "index": "57",
+          "title": "德充符（1）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/57_德充符（1）.mp3",
+          "duration": 877.3
+        },
+        {
+          "index": "58",
+          "title": "德充符（2）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/58_德充符（2）.mp3",
+          "duration": 971.8
+        },
+        {
+          "index": "59",
+          "title": "德充符（3）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/59_德充符（3）.mp3",
+          "duration": 950.1
+        },
+        {
+          "index": "60",
+          "title": "德充符（4）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/60_德充符（4）.mp3",
+          "duration": 873.2
+        },
+        {
+          "index": "61",
+          "title": "德充符（5）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/61_德充符（5）.mp3",
+          "duration": 1007.0
+        },
+        {
+          "index": "62",
+          "title": "德充符（6）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/62_德充符（6）.mp3",
+          "duration": 688.6
+        },
+        {
+          "index": "63",
+          "title": "德充符（7）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/63_德充符（7）.mp3",
+          "duration": 964.1
+        },
+        {
+          "index": "64",
+          "title": "德充符（8）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/64_德充符（8）.mp3",
+          "duration": 837.2
+        },
+        {
+          "index": "65",
+          "title": "大宗师（1）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/65_大宗师（1）.mp3",
+          "duration": 1191.8
+        },
+        {
+          "index": "66",
+          "title": "大宗师（2）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/66_大宗师（2）.mp3",
+          "duration": 753.1
+        },
+        {
+          "index": "67",
+          "title": "大宗师（3）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/67_大宗师（3）.mp3",
+          "duration": 757.4
+        },
+        {
+          "index": "68",
+          "title": "大宗师（4）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/68_大宗师（4）.mp3",
+          "duration": 878.9
+        },
+        {
+          "index": "69",
+          "title": "大宗师（5）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/69_大宗师（5）.mp3",
+          "duration": 860.0
+        },
+        {
+          "index": "70",
+          "title": "大宗师（6）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/70_大宗师（6）.mp3",
+          "duration": 709.9
+        },
+        {
+          "index": "71",
+          "title": "大宗师（7）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/71_大宗师（7）.mp3",
+          "duration": 976.2
+        },
+        {
+          "index": "72",
+          "title": "大宗师（8）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/72_大宗师（8）.mp3",
+          "duration": 805.3
+        },
+        {
+          "index": "73",
+          "title": "大宗师（9）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/73_大宗师（9）.mp3",
+          "duration": 678.0
+        },
+        {
+          "index": "74",
+          "title": "大宗师（10）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/74_大宗师（10）.mp3",
+          "duration": 970.2
+        },
+        {
+          "index": "75",
+          "title": "大宗师（11）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/75_大宗师（11）.mp3",
+          "duration": 859.9
+        },
+        {
+          "index": "76",
+          "title": "大宗师（12）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/76_大宗师（12）.mp3",
+          "duration": 1258.0
+        },
+        {
+          "index": "77",
+          "title": "大宗师（13）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/77_大宗师（13）.mp3",
+          "duration": 979.1
+        },
+        {
+          "index": "78",
+          "title": "大宗师（14）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/78_大宗师（14）.mp3",
+          "duration": 683.6
+        },
+        {
+          "index": "79",
+          "title": "大宗师（15）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/79_大宗师（15）.mp3",
+          "duration": 941.5
+        },
+        {
+          "index": "80",
+          "title": "大宗师（16）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/80_大宗师（16）.mp3",
+          "duration": 963.9
+        },
+        {
+          "index": "81",
+          "title": "大宗师（17）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/81_大宗师（17）.mp3",
+          "duration": 1174.4
+        },
+        {
+          "index": "82",
+          "title": "大宗师（18）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/82_大宗师（18）.mp3",
+          "duration": 1716.8
+        },
+        {
+          "index": "83",
+          "title": "大宗师（19）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/83_大宗师（19）.mp3",
+          "duration": 917.0
+        },
+        {
+          "index": "84",
+          "title": "大宗师（20）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/84_大宗师（20）.mp3",
+          "duration": 687.2
+        },
+        {
+          "index": "85",
+          "title": "应帝王（1）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/85_应帝王（1）.mp3",
+          "duration": 860.9
+        },
+        {
+          "index": "86",
+          "title": "应帝王（2）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/86_应帝王（2）.mp3",
+          "duration": 791.3
+        },
+        {
+          "index": "87",
+          "title": "应帝王（3）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/87_应帝王（3）.mp3",
+          "duration": 868.0
+        },
+        {
+          "index": "88",
+          "title": "应帝王（4）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/88_应帝王（4）.mp3",
+          "duration": 970.4
+        },
+        {
+          "index": "89",
+          "title": "应帝王（5）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/89_应帝王（5）.mp3",
+          "duration": 834.2
+        },
+        {
+          "index": "90",
+          "title": "应帝王（6）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/90_应帝王（6）.mp3",
+          "duration": 647.3
+        },
+        {
+          "index": "91",
+          "title": "应帝王（7）",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/91_应帝王（7）.mp3",
+          "duration": 735.9
+        }
+      ]
+    },
+    {
+      "id": "yijing-zashuo",
+      "title": "易经杂说",
+      "author": "南怀瑾",
+      "original": "南怀瑾 著述",
+      "desc": "南师《易经杂说》全本解读性讲读。从理、象、数入手，串讲先天八卦、后天八卦、京房十六卦变、河图洛书、天干地支与五行、六十四卦的来源，再落到乾卦、坤卦、屯卦、需卦等经传要义。破除以为《易经》只是占卜算命的迷思，揭示其作为中华文化源头活水的哲理与日用常行。深入浅出，人人能懂。全本共三十八节，约三小时余。",
+      "cover": "",
+      "visible": true,
+      "order": 9,
+      "tracks": [
+        {
+          "index": "01",
+          "title": "出版说明",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/01_出版说明.mp3",
+          "duration": 711.0
+        },
+        {
+          "index": "02",
+          "title": "理、象、数",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/02_理、象、数.mp3",
+          "duration": 838.4
+        },
+        {
+          "index": "03",
+          "title": "先天八卦",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/03_先天八卦.mp3",
+          "duration": 819.6
+        },
+        {
+          "index": "04",
+          "title": "后天八卦",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/04_后天八卦.mp3",
+          "duration": 754.0
+        },
+        {
+          "index": "05",
+          "title": "六十四卦的来源",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/05_六十四卦的来源.mp3",
+          "duration": 1354.2
+        },
+        {
+          "index": "06",
+          "title": "错综——相对与反对",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/06_错综——相对与反对.mp3",
+          "duration": 946.5
+        },
+        {
+          "index": "07",
+          "title": "京房十六卦变",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/07_京房十六卦变.mp3",
+          "duration": 938.6
+        },
+        {
+          "index": "08",
+          "title": "先知——邵康节的毛病",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/08_先知——邵康节的毛病.mp3",
+          "duration": 961.2
+        },
+        {
+          "index": "09",
+          "title": "天干与五行",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/09_天干与五行.mp3",
+          "duration": 770.4
+        },
+        {
+          "index": "10",
+          "title": "六十花甲与历史验证",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/10_六十花甲与历史验证.mp3",
+          "duration": 1012.3
+        },
+        {
+          "index": "11",
+          "title": "金钱卦",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/11_金钱卦.mp3",
+          "duration": 1070.9
+        },
+        {
+          "index": "12",
+          "title": "从天文星象看河图",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/12_从天文星象看河图.mp3",
+          "duration": 463.7
+        },
+        {
+          "index": "13",
+          "title": "方以类聚物以群分",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/13_方以类聚物以群分.mp3",
+          "duration": 1006.8
+        },
+        {
+          "index": "14",
+          "title": "日月运行寒来暑往",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/14_日月运行寒来暑往.mp3",
+          "duration": 1741.1
+        },
+        {
+          "index": "15",
+          "title": "节气与十二律吕",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/15_节气与十二律吕.mp3",
+          "duration": 585.2
+        },
+        {
+          "index": "16",
+          "title": "十二辟卦的应用",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/16_十二辟卦的应用.mp3",
+          "duration": 991.3
+        },
+        {
+          "index": "17",
+          "title": "至简至易",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/17_至简至易.mp3",
+          "duration": 767.0
+        },
+        {
+          "index": "18",
+          "title": "动的哲学",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/18_动的哲学.mp3",
+          "duration": 805.3
+        },
+        {
+          "index": "19",
+          "title": "三大问题",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/19_三大问题.mp3",
+          "duration": 835.1
+        },
+        {
+          "index": "20",
+          "title": "化生",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/20_化生.mp3",
+          "duration": 830.0
+        },
+        {
+          "index": "21",
+          "title": "终日乾乾",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/21_终日乾乾.mp3",
+          "duration": 689.2
+        },
+        {
+          "index": "22",
+          "title": "大吉大利的保合太和",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/22_大吉大利的保合太和.mp3",
+          "duration": 810.5
+        },
+        {
+          "index": "23",
+          "title": "领导者的修养与风范",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/23_领导者的修养与风范.mp3",
+          "duration": 787.5
+        },
+        {
+          "index": "24",
+          "title": "用九而不被九用",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/24_用九而不被九用.mp3",
+          "duration": 1236.6
+        },
+        {
+          "index": "25",
+          "title": "大人的境界",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/25_大人的境界.mp3",
+          "duration": 682.6
+        },
+        {
+          "index": "26",
+          "title": "坤为什么独利母马",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/26_坤为什么独利母马.mp3",
+          "duration": 776.0
+        },
+        {
+          "index": "27",
+          "title": "无成有终的哲学",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/27_无成有终的哲学.mp3",
+          "duration": 781.6
+        },
+        {
+          "index": "28",
+          "title": "孔老夫子的因果观",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/28_孔老夫子的因果观.mp3",
+          "duration": 822.9
+        },
+        {
+          "index": "29",
+          "title": "屯的卦义",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/29_屯的卦义.mp3",
+          "duration": 758.8
+        },
+        {
+          "index": "30",
+          "title": "屯如邅如前程茫茫",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/30_屯如邅如前程茫茫.mp3",
+          "duration": 854.7
+        },
+        {
+          "index": "31",
+          "title": "泣血涟如不可长也",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/31_泣血涟如不可长也.mp3",
+          "duration": 1003.3
+        },
+        {
+          "index": "32",
+          "title": "刑法与教育功能",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/32_刑法与教育功能.mp3",
+          "duration": 999.3
+        },
+        {
+          "index": "33",
+          "title": "需卦爻辞",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/33_需卦爻辞.mp3",
+          "duration": 1038.5
+        },
+        {
+          "index": "34",
+          "title": "孔子说创世纪的开始",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/34_孔子说创世纪的开始.mp3",
+          "duration": 1239.1
+        },
+        {
+          "index": "35",
+          "title": "由复到离看人生兴衰往还",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/35_由复到离看人生兴衰往还.mp3",
+          "duration": 925.1
+        },
+        {
+          "index": "36",
+          "title": "功成，名遂，身退",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/36_功成，名遂，身退.mp3",
+          "duration": 1036.4
+        },
+        {
+          "index": "37",
+          "title": "不断的研究与求证",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/37_不断的研究与求证.mp3",
+          "duration": 644.8
+        },
+        {
+          "index": "38",
+          "title": "南怀瑾先生著述目录",
+          "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/38_南怀瑾先生著述目录.mp3",
+          "duration": 324.2
+        }
+      ]
     }
   ]
 }
