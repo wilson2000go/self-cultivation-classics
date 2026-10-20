@@ -58,7 +58,8 @@
           "file": "audio/zhongguo-fojiao-fazhan-shilue/07_附录下丛林制度.mp3",
           "duration": 678.6
         }
-      ]
+      ],
+      "category": "guoxue"
     },
     {
       "id": "lengyan-dayi-jinshi",
@@ -118,7 +119,8 @@
           "file": "books/楞严大义今释/audio/07_修习佛法定慧中的错误和歧路.mp3",
           "duration": 536.3
         }
-      ]
+      ],
+      "category": "guoxue"
     },
     {
       "id": "chanshengming-renzhi",
@@ -178,7 +180,8 @@
           "file": "audio/chanshengming-renzhi/07_第七日.mp3",
           "duration": 1534.2
         }
-      ]
+      ],
+      "category": "guoxue"
     },
     {
       "id": "chanhai-lishe",
@@ -316,7 +319,8 @@
           "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-chanhai/main/audio/chanhai-lishe/20_修定与参禅法要.mp3",
           "duration": 1091.3
         }
-      ]
+      ],
+      "category": "guoxue"
     },
     {
       "id": "jingang-jingshuo",
@@ -526,7 +530,8 @@
           "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-jingang/main/audio/jingang-jingshuo/32_第三十二品应化非真分.mp3",
           "duration": 1334
         }
-      ]
+      ],
+      "category": "guoxue"
     },
     {
       "id": "zhongguo-daojiao-fazhan-shilue",
@@ -592,7 +597,8 @@
           "file": "audio/zhongguo-daojiao-fazhan-shilue/09_附录道藏缘启.mp3",
           "duration": 639.1
         }
-      ]
+      ],
+      "category": "guoxue"
     },
     {
       "id": "laozi-tashuo",
@@ -982,7 +988,8 @@
           "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/laozi-tashuo/63_第二十六章（十）.mp3",
           "duration": 1124.2
         }
-      ]
+      ],
+      "category": "guoxue"
     },
     {
       "id": "zhuangzi-nanhua",
@@ -1540,7 +1547,8 @@
           "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/zhuangzi-nanhua/91_应帝王（7）.mp3",
           "duration": 735.9
         }
-      ]
+      ],
+      "category": "guoxue"
     },
     {
       "id": "yijing-zashuo",
@@ -1780,7 +1788,109 @@
           "file": "https://raw.githubusercontent.com/wilson2000go/self-cultivation-audio/main/audio/yijing-zashuo/38_南怀瑾先生著述目录.mp3",
           "duration": 324.2
         }
+      ],
+      "category": "guoxue"
+    },
+    {
+      "id": "ruanyin",
+      "title": "软瘾",
+      "author": "朱迪斯·莱特",
+      "original": "Judith Wright 著",
+      "desc": "终结那些窃取你时间、夺走你生活的强迫性习惯。一本关于「软瘾」（无意识沉迷、心理依赖）的自我成长指南——从做出核心决定、识别软瘾、破解密码，到满足精神需求、构建愿景、加减法行动、获得支持，陪你一步步拿回生活的主动权。",
+      "cover": "",
+      "visible": true,
+      "order": 10,
+      "category": "psyche",
+      "tracks": [
+        {
+          "index": "01",
+          "title": "导论",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/01_导论.mp3",
+          "duration": 1146
+        },
+        {
+          "index": "02",
+          "title": "第1章 你的生活应该更充实",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/02_第1章 你的生活应该更充实.mp3",
+          "duration": 1919
+        },
+        {
+          "index": "03",
+          "title": "第2章 做出你的核心决定",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/03_第2章 做出你的核心决定.mp3",
+          "duration": 1875
+        },
+        {
+          "index": "04",
+          "title": "第3章 确定你的软瘾",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/04_第3章 确定你的软瘾.mp3",
+          "duration": 1067
+        },
+        {
+          "index": "05",
+          "title": "第4章 关注你的思维",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/05_第4章 关注你的思维.mp3",
+          "duration": 955
+        },
+        {
+          "index": "06",
+          "title": "第5章 破解你的软瘾密码",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/06_第5章 破解你的软瘾密码.mp3",
+          "duration": 1043
+        },
+        {
+          "index": "07",
+          "title": "第6章 满足你的精神需求",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/07_第6章 满足你的精神需求.mp3",
+          "duration": 1775
+        },
+        {
+          "index": "08",
+          "title": "第7章 构建你的愿景",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/08_第7章 构建你的愿景.mp3",
+          "duration": 1534
+        },
+        {
+          "index": "09",
+          "title": "第8章 通过加减法来实现愿景",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/09_第8章 通过加减法来实现愿景.mp3",
+          "duration": 1843
+        },
+        {
+          "index": "10",
+          "title": "第9章 获得支持并负起责任",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/10_第9章 获得支持并负起责任.mp3",
+          "duration": 1769
+        },
+        {
+          "index": "11",
+          "title": "第10章 弯路与校正",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/11_第10章 弯路与校正.mp3",
+          "duration": 1651
+        },
+        {
+          "index": "12",
+          "title": "第11章 关于爱的四大真理",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/12_第11章 关于爱的四大真理.mp3",
+          "duration": 1002
+        },
+        {
+          "index": "13",
+          "title": "结语 对充实的伟大追求",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/soft-addiction-audiobook@main/audio/软瘾/13_结语 对充实的伟大追求.mp3",
+          "duration": 1949
+        }
       ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "guoxue",
+      "name": "国学·经典"
+    },
+    {
+      "id": "psyche",
+      "name": "心理·自我成长"
     }
   ]
 }
