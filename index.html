@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta name="theme-color" content="#f5f1e8">
-<title>国学经典书籍语音解读</title>
+<title>经典书籍语音听读 · 国学与心理成长</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
 <style>
 :root{
@@ -207,14 +207,19 @@ body{padding-bottom:250px}
 .like:hover{transform:scale(1.1)}
 .like.done{color:#c0392b}
 .book-cover{width:100%;height:96px;object-fit:cover;border-radius:10px;margin-bottom:10px;display:block;background:#efe9dc}
-</style>
+
+  .cat-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+  .cat-tab{font-family:var(--serif);font-size:15px;color:#6b5a44;background:#f4ece0;border:1px solid #e2d4bf;padding:7px 17px;border-radius:20px;cursor:pointer;transition:.2s;}
+  .cat-tab:hover{background:#ecdcc4;}
+  .cat-tab.active{background:#7a6a4f;color:#fff;border-color:#7a6a4f;}
+  </style>
 </head>
 <body>
 
 <header>
   <div class="enso"></div>
-  <h1>国学经典书籍语音解读</h1>
-  <div class="subtitle">听 读 经 典 · 修 身 养 性</div>
+  <h1>经典书籍语音听读</h1>
+  <div class="subtitle">听 读 经 典 · 涵 养 身 心</div>
   <div class="top-links">
     <a href="https://github.com/wilson2000go/self-cultivation-classics" target="_blank" rel="noopener">GitHub 仓库</a>
   </div>
@@ -223,10 +228,11 @@ body{padding-bottom:250px}
 <main>
   <div class="wrap">
     <section id="viewShelf" class="view active">
-      <div class="shelf-head">
-        <h2>收读书目</h2>
-        <input class="shelf-search" id="shelfSearch" type="search" placeholder="搜索书名 / 作者…" aria-label="搜索书目">
-      </div>
+              <div class="shelf-head">
+          <h2>收读书目</h2>
+          <input class="shelf-search" id="shelfSearch" type="search" placeholder="搜索书名 / 作者…" aria-label="搜索书目">
+          <div class="cat-tabs" id="catTabs"></div>
+        </div>
       <div class="book-grid" id="bookGrid"></div>
     </section>
     <section id="viewReader" class="view">
@@ -311,9 +317,18 @@ let BOOKS = [];
 /* ================= 播放器 ================= */
 const $ = id => document.getElementById(id);
 const audio = $("audio");
+  audio.addEventListener('error', () => {
+    if (audio.src.indexOf('cdn.jsdelivr.net') > -1 && audio.dataset.fb !== '1') {
+      audio.dataset.fb = '1';
+      audio.src = audio.src.replace('https://cdn.jsdelivr.net/gh/', 'https://raw.githubusercontent.com/').replace('@main/', '/main/');
+      audio.play().catch(()=>{});
+    }
+  });
 const RATES = [1.0, 1.25, 1.5, 0.75];
 const STORE = "sccx-progress";
 let curFilter = "";
+  let curCat = "all";
+  let CATEGORIES = [];
 
 let curBook = 0, curTrack = -1;
 let dragging = false, resumeAt = 0;
@@ -335,12 +350,20 @@ function saveState(){
 }
 
 /* ---------- 渲染书目 ---------- */
-function renderBooks(){
+function renderCatTabs(){
+    const wrap = $("catTabs"); if(!wrap) return;
+    const all = [{id:'all', name:'全部'}].concat(CATEGORIES);
+    wrap.innerHTML = all.map(c => '<button class="cat-tab'+(c.id===curCat?' active':'')+'" data-c="'+c.id+'">'+c.name+'</button>').join('');
+    wrap.querySelectorAll('.cat-tab').forEach(btn => { btn.onclick = () => { curCat = btn.dataset.c; renderCatTabs(); renderBooks(); }; });
+  }
+
+  function renderBooks(){
   const grid = $("bookGrid");
   grid.innerHTML = "";
   const kw = curFilter.trim().toLowerCase();
   BOOKS.forEach((b, i) => {
     if (kw && !(b.title.toLowerCase().includes(kw) || (b.author||"").toLowerCase().includes(kw))) return;
+    if (curCat !== "all" && b.category !== curCat) return;
     const min = Math.round(bookDur(b)/60);
     const p = loadProgress(b.id);
     const card = document.createElement("div");
@@ -443,7 +466,7 @@ function playTrack(b, t, seek){
   curBook = b; curTrack = t;
   try{ fbInc("plays","books",BOOKS[b].id); fbInc("plays","books",BOOKS[b].id,"tracks",String(t)); }catch(e){}
   const track = BOOKS[b].tracks[t];
-  audio.src = encodeURI(track.file);
+  audio.dataset.fb=""; audio.src = encodeURI(track.file);
   audio.playbackRate = audio.playbackRate || 1;
   resumeAt = seek || 0;
   audio.play().catch(()=>{});
@@ -533,6 +556,8 @@ window.addEventListener("beforeunload", saveState);
     const res = await fetch('data.json', {cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     const data = await res.json();
+    CATEGORIES = data.categories || [];
+    renderCatTabs();
     BOOKS = (data.books||[])
       .filter(b => b.visible !== false)
       .sort((a,b)=> (a.order==null?999:a.order) - (b.order==null?999:b.order));
