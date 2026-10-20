@@ -1881,16 +1881,93 @@
           "duration": 1949
         }
       ]
+    },
+    {
+      "id": "peiyang-shehui-nengli",
+      "title": "如何培养孩子的社会能力",
+      "author": "[美] 默娜·B.舒尔 / 特里萨·弗伊·迪吉若尼莫 著 · 张雪兰 译",
+      "original": "默娜·B.舒尔 等 著",
+      "desc": "这是一本教父母「如何思考，而不是思考什么」的育儿书。作者基于数十年研究，提出 <b>ICPS（我能解决问题）</b> 对话法：不替孩子做决定，而是用一套字词游戏和提问，帮孩子自己想出解决办法、理解他人感受、预判后果。本听读按章节拆解全书，陪你边听边练。",
+      "cover": "",
+      "visible": true,
+      "order": 11,
+      "category": "family",
+      "tracks": [
+        {
+          "index": "00",
+          "title": "引言",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/00_引言.mp3",
+          "duration": 874
+        },
+        {
+          "index": "01",
+          "title": "第1章 如何思考，而不是思考什么",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/01_第1章_如何思考而不是思考什么.mp3",
+          "duration": 692
+        },
+        {
+          "index": "02",
+          "title": "第2章 字词游戏",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/02_第2章_字词游戏.mp3",
+          "duration": 997
+        },
+        {
+          "index": "03",
+          "title": "第3章 理解他人的感受",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/03_第3章_理解他人的感受.mp3",
+          "duration": 1386
+        },
+        {
+          "index": "04",
+          "title": "第4章 更多的字词练习",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/04_第4章_更多的字词练习.mp3",
+          "duration": 962
+        },
+        {
+          "index": "05",
+          "title": "第5章 寻找多种解决办法",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/05_第5章_寻找多种解决办法.mp3",
+          "duration": 1479
+        },
+        {
+          "index": "06",
+          "title": "第6章 考虑后果",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/06_第6章_考虑后果.mp3",
+          "duration": 1163
+        },
+        {
+          "index": "07",
+          "title": "第7章 游戏和活动",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/07_第7章_游戏和活动.mp3",
+          "duration": 934
+        },
+        {
+          "index": "08",
+          "title": "第8章 综合运用",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/08_第8章_综合运用.mp3",
+          "duration": 1269
+        },
+        {
+          "index": "09",
+          "title": "附录 自我评价与实用工具",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/raise-thinking-child-audio@main/audio/raise_thinking_child/09_附录_自我评价与实用工具.mp3",
+          "duration": 724
+        }
+      ]
     }
   ],
   "categories": [
     {
       "id": "guoxue",
-      "name": "国学·经典"
+      "name": "国学经典"
     },
     {
       "id": "psyche",
-      "name": "心理·自我成长"
+      "name": "心理成长"
+    },
+    {
+      "id": "family",
+      "name": "家庭教育"
     }
   ]
 }
