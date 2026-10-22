@@ -2179,6 +2179,140 @@
           "duration": 2285
         }
       ]
+    },
+    {
+      "id": "beitaoyan_deyongqi",
+      "title": "被讨厌的勇气：\"自我启发之父\"阿德勒的哲学课",
+      "author": "岸见一郎、古贺史健",
+      "original": "岸见一郎、古贺史健 著",
+      "desc": "<b>「自我启发之父」阿德勒的哲学课。</b>以青年与哲人的对话，讲透否定心理创伤、课题分离、共同体感觉与被讨厌的勇气——挣脱人际束缚，在当下获得自由与幸福。",
+      "cover": "",
+      "visible": true,
+      "order": 15,
+      "category": "psyche",
+      "tracks": [
+        {
+          "index": "01",
+          "title": "序章 人生被骗了吗",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/01_序章_人生被骗了吗.mp3",
+          "duration": 340
+        },
+        {
+          "index": "02",
+          "title": "第一夜上 我们的不幸是谁的错",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/02_第一夜上_我们的不幸是谁的错.mp3",
+          "duration": 278
+        },
+        {
+          "index": "03",
+          "title": "第一夜下 心理创伤并不存在",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/03_第一夜下_心理创伤并不存在.mp3",
+          "duration": 529
+        },
+        {
+          "index": "04",
+          "title": "第二夜上 一切烦恼都来自人际关系",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/04_第二夜上_一切烦恼都来自人际关系.mp3",
+          "duration": 709
+        },
+        {
+          "index": "05",
+          "title": "第二夜下 人生谎言教我们学会逃避",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/05_第二夜下_人生谎言教我们学会逃避.mp3",
+          "duration": 649
+        },
+        {
+          "index": "06",
+          "title": "第三夜上 让干涉你生活的人见鬼去",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/06_第三夜上_让干涉你生活的人见鬼去.mp3",
+          "duration": 715
+        },
+        {
+          "index": "07",
+          "title": "第三夜下 自由就是被别人讨厌",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/07_第三夜下_自由就是被别人讨厌.mp3",
+          "duration": 355
+        },
+        {
+          "index": "08",
+          "title": "第四夜上 人际关系的终极目标",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/08_第四夜上_人际关系的终极目标.mp3",
+          "duration": 448
+        },
+        {
+          "index": "09",
+          "title": "第四夜下 只要存在着就有价值",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/09_第四夜下_只要存在着就有价值.mp3",
+          "duration": 643
+        },
+        {
+          "index": "10",
+          "title": "第五夜上 接纳自我与工作的本质",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/10_第五夜上_接纳自我与工作的本质.mp3",
+          "duration": 626
+        },
+        {
+          "index": "11",
+          "title": "第五夜下 从这一刻起就能幸福",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/11_第五夜下_从这一刻起就能幸福.mp3",
+          "duration": 503
+        },
+        {
+          "index": "12",
+          "title": "终章 人生的意义由你自己决定",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/beitaoyan-deyongqi-audiobook@main/audio/beitaoyan_deyongqi/12_终章_人生的意义由你自己决定.mp3",
+          "duration": 782
+        }
+      ]
+    },
+    {
+      "id": "xingfu_deyongqi",
+      "title": "幸福的勇气：\"自我启发之父\"阿德勒哲学课2",
+      "author": "岸见一郎、古贺史健",
+      "original": "岸见一郎、古贺史健 著",
+      "desc": "<b>「阿德勒哲学课」第二部。</b>前作给出自由的理论，这一部回答如何把爱活出来：否定赏罚、由竞争走向协作、以勇气去爱。逐章讲透幸福的实践。",
+      "cover": "",
+      "visible": true,
+      "order": 16,
+      "category": "psyche",
+      "tracks": [
+        {
+          "index": "01",
+          "title": "序章 人们误解了阿德勒思想",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/xingfu-deyongqi-audiobook@main/audio/xingfu_deyongqi/01_序章_人们误解了阿德勒思想.mp3",
+          "duration": 465
+        },
+        {
+          "index": "02",
+          "title": "第一章 可恶的他人可怜的自己",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/xingfu-deyongqi-audiobook@main/audio/xingfu_deyongqi/02_第一章_可恶的他人可怜的自己.mp3",
+          "duration": 673
+        },
+        {
+          "index": "03",
+          "title": "第二章 为何要否定赏罚",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/xingfu-deyongqi-audiobook@main/audio/xingfu_deyongqi/03_第二章_为何要否定赏罚.mp3",
+          "duration": 902
+        },
+        {
+          "index": "04",
+          "title": "第三章 由竞争原理到协作原理",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/xingfu-deyongqi-audiobook@main/audio/xingfu_deyongqi/04_第三章_由竞争原理到协作原理.mp3",
+          "duration": 654
+        },
+        {
+          "index": "05",
+          "title": "第四章 付出然后才有收获",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/xingfu-deyongqi-audiobook@main/audio/xingfu_deyongqi/05_第四章_付出然后才有收获.mp3",
+          "duration": 751
+        },
+        {
+          "index": "06",
+          "title": "第五章 选择爱的人生",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/xingfu-deyongqi-audiobook@main/audio/xingfu_deyongqi/06_第五章_选择爱的人生.mp3",
+          "duration": 833
+        }
+      ]
     }
   ],
   "categories": [
