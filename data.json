@@ -1954,6 +1954,231 @@
           "duration": 724
         }
       ]
+    },
+    {
+      "id": "shenye_shudong",
+      "title": "深夜树洞：写给年轻人的解忧回信",
+      "author": "本书编委会",
+      "original": "本书编委会 编",
+      "desc": "<b>写给年轻人的解忧回信。</b>全书围绕「我、他、家、爱、业、时」六个维度，回应成长中的真实困惑。本听读按章拆解，陪你在一封封回信里慢慢松绑。",
+      "cover": "",
+      "visible": true,
+      "order": 12,
+      "category": "psyche",
+      "tracks": [
+        {
+          "index": "01",
+          "title": "我：拥有面对真实自我的勇气",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/shenye-shudong-audiobook@main/audio/shenye_shudong/01_第1章_我_拥有面对真实自我的勇气.mp3",
+          "duration": 1334
+        },
+        {
+          "index": "02",
+          "title": "他：不迷失在形形色色的关系中",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/shenye-shudong-audiobook@main/audio/shenye_shudong/02_第2章_他_不迷失在形形色色的关系中.mp3",
+          "duration": 1069
+        },
+        {
+          "index": "03",
+          "title": "家：家本该是累了最想回去的地方",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/shenye-shudong-audiobook@main/audio/shenye_shudong/03_第3章_家_家本该是累了最想回去的地方.mp3",
+          "duration": 1498
+        },
+        {
+          "index": "04",
+          "title": "爱：我们常常渴望爱，又怕失去爱",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/shenye-shudong-audiobook@main/audio/shenye_shudong/04_第4章_爱_我们常常渴望爱_又怕失去爱.mp3",
+          "duration": 1962
+        },
+        {
+          "index": "05",
+          "title": "业：在学习和工作中找寻自己的价值和位置",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/shenye-shudong-audiobook@main/audio/shenye_shudong/05_第5章_业_在学习和工作中找寻自己的价值和位置.mp3",
+          "duration": 1285
+        },
+        {
+          "index": "06",
+          "title": "时：滴滴答答的时光中，你想留下什么",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/shenye-shudong-audiobook@main/audio/shenye_shudong/06_第6章_时_滴滴答答的时光中_你想留下什么.mp3",
+          "duration": 1340
+        }
+      ]
+    },
+    {
+      "id": "neizai_dongji",
+      "title": "内在动机：自主掌控人生的力量",
+      "author": "爱德华·L. 德西、理查德·弗拉斯特",
+      "original": "爱德华·L. 德西、理查德·弗拉斯特 著",
+      "desc": "<b>自我决定论奠基之作。</b>它颠覆了靠奖励和惩罚激励人的常识，告诉我们真正持久的行动力来自内心的自主选择。本听读逐章讲透自主、胜任、归属三大心理需求。",
+      "cover": "",
+      "visible": true,
+      "order": 13,
+      "category": "psyche",
+      "tracks": [
+        {
+          "index": "01",
+          "title": "第1章 但他是老板：权威和不满",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/01_第1章_但他是老板_权威和不满.mp3",
+          "duration": 731
+        },
+        {
+          "index": "02",
+          "title": "第2章 我只是为了钱：关于奖赏和疏离的早期实验",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/02_第2章_我只是为了钱_关于奖赏和疏离的早期实验.mp3",
+          "duration": 726
+        },
+        {
+          "index": "03",
+          "title": "第3章 我能决定自己的选择：个人自主的需要",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/03_第3章_我能决定自己的选择_个人自主的需要.mp3",
+          "duration": 876
+        },
+        {
+          "index": "04",
+          "title": "第4章 追求体验还是结果：内在动机与外部控制",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/04_第4章_追求体验还是结果_内在动机与外部控制.mp3",
+          "duration": 783
+        },
+        {
+          "index": "05",
+          "title": "第5章 我能做到：带着胜任感面对人生挑战",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/05_第5章_我能做到_带着胜任感面对人生挑战.mp3",
+          "duration": 702
+        },
+        {
+          "index": "06",
+          "title": "第6章 走向自我的一致与和谐：发展的内在力量",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/06_第6章_走向自我的一致与和谐_发展的内在力量.mp3",
+          "duration": 922
+        },
+        {
+          "index": "07",
+          "title": "第7章 自主地承担重要但无趣的事：当社会召唤时",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/07_第7章_自主地承担重要但无趣的事_当社会召唤时.mp3",
+          "duration": 825
+        },
+        {
+          "index": "08",
+          "title": "第8章 关于应该、必须、不得不的信念：社会中的自我",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/08_第8章_关于应该_必须_不得不的信念_社会中的自我.mp3",
+          "duration": 826
+        },
+        {
+          "index": "09",
+          "title": "第9章 美国梦的代价：当社会问题恶化时",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/09_第9章_美国梦的代价_当社会问题恶化时.mp3",
+          "duration": 795
+        },
+        {
+          "index": "10",
+          "title": "第10章 从他人的角度出发：如何促进自主",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/10_第10章_从他人的角度出发_如何促进自主.mp3",
+          "duration": 984
+        },
+        {
+          "index": "11",
+          "title": "第11章 从探索动机开始：促进健康的行为",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/11_第11章_从探索动机开始_促进健康的行为.mp3",
+          "duration": 908
+        },
+        {
+          "index": "12",
+          "title": "第12章 摆脱束缚，接纳自我：在控制中做到自主",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/12_第12章_摆脱束缚_接纳自我_在控制中做到自主.mp3",
+          "duration": 725
+        },
+        {
+          "index": "13",
+          "title": "第13章 追求自主的意义",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neizai-dongji-audiobook@main/audio/neizai_dongji/13_第13章_追求自主的意义.mp3",
+          "duration": 1068
+        }
+      ]
+    },
+    {
+      "id": "neixin_chongjian",
+      "title": "内心的重建",
+      "author": "维尼老师",
+      "original": "维尼老师 著",
+      "desc": "<b>维尼老师心理成长代表作。</b>用认知疗法与「三种思维」等工具，科学理解情绪、驱力、童年影响与自我接纳。本听读按章梳理核心方法。",
+      "cover": "",
+      "visible": true,
+      "order": 14,
+      "category": "psyche",
+      "tracks": [
+        {
+          "index": "01",
+          "title": "第一章 心理成长，需要科学指导",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/01_第一章_心理成长，需要科学指导.mp3",
+          "duration": 1554
+        },
+        {
+          "index": "02",
+          "title": "第二章 心理成长的钥匙：认知疗法",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/02_第二章_心理成长的钥匙_认知疗法.mp3",
+          "duration": 2445
+        },
+        {
+          "index": "03",
+          "title": "第三章 内心强大的神器：三种思维",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/03_第三章_内心强大的神器_三种思维.mp3",
+          "duration": 1407
+        },
+        {
+          "index": "04",
+          "title": "第四章 影响我们的神秘力量：驱力",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/04_第四章_影响我们的神秘力量_驱力.mp3",
+          "duration": 1171
+        },
+        {
+          "index": "05",
+          "title": "第五章 少有人掌握的情绪奥秘",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/05_第五章_少有人掌握的情绪奥秘.mp3",
+          "duration": 1841
+        },
+        {
+          "index": "06",
+          "title": "第六章 童年会伤人，如何看待环境影响",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/06_第六章_童年会伤人，如何看待环境影响.mp3",
+          "duration": 1501
+        },
+        {
+          "index": "07",
+          "title": "第七章 为什么说成功学害人不浅",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/07_第七章_为什么说成功学害人不浅.mp3",
+          "duration": 1584
+        },
+        {
+          "index": "08",
+          "title": "第八章 接纳不完美的自己",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/08_第八章_接纳不完美的自己.mp3",
+          "duration": 1072
+        },
+        {
+          "index": "09",
+          "title": "第九章 顺其自然的人生态度",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/09_第九章_顺其自然的人生态度.mp3",
+          "duration": 1599
+        },
+        {
+          "index": "10",
+          "title": "第十章 如何有效改善性格",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/10_第十章_如何有效改善性格.mp3",
+          "duration": 1758
+        },
+        {
+          "index": "11",
+          "title": "第十一章 建立良好的人际关系",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/11_第十一章_建立良好的人际关系.mp3",
+          "duration": 883
+        },
+        {
+          "index": "12",
+          "title": "第十二章 心理问题是可以理解的",
+          "file": "https://cdn.jsdelivr.net/gh/wilson2000go/neixin-chongjian-audiobook@main/audio/neixin_chongjian/12_第十二章_心理问题是可以理解的.mp3",
+          "duration": 2285
+        }
+      ]
     }
   ],
   "categories": [
